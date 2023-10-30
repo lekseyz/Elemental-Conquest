@@ -12981,6 +12981,9 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 635321086}
   animator: {fileID: 635321088}
+  dashSpeed: 30
+  dashDuration: 0.3
+  dashCooldown: 2
 --- !u!95 &635321088
 Animator:
   serializedVersion: 5
