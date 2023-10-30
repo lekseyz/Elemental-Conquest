@@ -5,13 +5,13 @@ public class Walk : MonoBehaviour
 {
     [SerializeField] public float speed;
 
+    Vector3 dir = Vector3.zero;
+    Vector3 dirMov = Vector3.zero;
+    Vector3 prevDirMov = Vector3.zero;
+    float scSpeed = 1f;
+
     public Rigidbody2D rb;
     public Animator animator;
-    Vector2 movement;
-    private bool StayUp;
-    private bool StayRight;
-    private bool StayLeft;
-    private bool StayDown;
 
     private float activeSpeed;
     public float dashSpeed;
@@ -25,68 +25,71 @@ public class Walk : MonoBehaviour
     
     private void Start()
     {
-        activeSpeed = speed;
-        StayLeft = false;
-        StayRight = false;
-        StayUp = false;
-        StayDown = false;
+        rb = GetComponent<Rigidbody2D>();
+        Time.fixedDeltaTime = 0.01f;
     }
+
+
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        //rewrited charecter movement
+        dirMov = Vector3.zero;
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.sqrMagnitude);
-        if (movement.sqrMagnitude > 0)
+        if(Input.GetKey(KeyCode.A))
         {
-            StayLeft = false;
-            StayRight = false;
-            StayUp = false;
-            StayDown = false;
+            dirMov.x = -1;
         }
-        movement.Normalize();
-        if ((movement.y == 1) && (StayLeft == false) && (StayRight == false) && (StayDown == false))
-            StayUp = true;
-        if ((movement.x == -1) && (StayUp == false) && (StayRight == false) && (StayDown == false))
-            StayLeft = true;
-        if ((movement.x == 1) && (StayLeft == false) && (StayUp == false) && (StayDown == false))
-            StayRight = true;
-        if ((movement.y == -1) && (StayLeft == false) && (StayUp == false) && (StayRight == false))
-            StayDown = true;
-  
-        animator.SetBool("StayLeft", StayLeft);
+        else if(Input.GetKey(KeyCode.D)) 
+        {
+            dirMov.x = 1;
+        }
+        
+        if(Input.GetKey(KeyCode.W))
+        {
+            dirMov.y = 1;
+        }
+        else if(Input.GetKey(KeyCode.S))
+        {
+            dirMov.y = -1;
+        }
 
-        animator.SetBool("StayUp", StayUp);
+        dirMov = Vector3.Lerp(prevDirMov, dirMov, scSpeed);
+        prevDirMov = dirMov;
 
-        animator.SetBool("StayRight", StayRight);
+        dirMov = dirMov.normalized;
+        dir = dirMov.magnitude > 0 ? dirMov : dir;
+        animator.SetBool("isMoving", rb.velocity.magnitude > 0);
 
-        animator.SetBool("StayDown", StayDown);
+        animator.SetFloat("Horizontal", dir.x);
+        animator.SetFloat("Vertical", dir.y);
+
+        
+
+
         //Dash implementation
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if ((dashCoolCounter<=0)&&(dashCounter<=0))
+            if ((dashCoolCounter <= 0) && (dashCounter <= 0))
             {
-                activeSpeed=dashSpeed;
-                dashCounter=dashDuration;
+                activeSpeed = dashSpeed;
+                dashCounter = dashDuration;
             }
         }
-        if (dashCounter>0)
+        if (dashCounter > 0)
         {
-            dashCounter-=Time.deltaTime;
+            dashCounter -= Time.deltaTime;
             dashCoolCounter = dashCooldown;
         }
         else
             activeSpeed = speed;
-        if (dashCoolCounter>0)
+        if (dashCoolCounter > 0)
         {
-            dashCoolCounter-=Time.deltaTime;
+            dashCoolCounter -= Time.deltaTime;
         }
+    }
 
-}
-private void FixedUpdate()
+    private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * activeSpeed * Time.fixedDeltaTime);
+        rb.velocity = dirMov * activeSpeed;
     }
 }
