@@ -1,10 +1,11 @@
 using System;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.UI;
 public class Walk : MonoBehaviour
 {
     [SerializeField] public float speed;
-
+    [SerializeField] Slider staminaSlider;
     Vector3 dir = Vector3.zero;
     Vector3 dirMov = Vector3.zero;
     Vector3 prevDirMov = Vector3.zero;
@@ -16,39 +17,46 @@ public class Walk : MonoBehaviour
     private float activeSpeed;
     public float dashSpeed;
 
-    public float dashDuration = 0.5f;
-    public float dashCooldown = 2f;
+    public float dashDuration;
+    public float dashCooldown;
 
-    private float dashCounter=0;
-    private float dashCoolCounter=0;
+    private float dashCounter = 0;
+    private float dashCoolCounter = 0;
 
-    
+    private float staminaValue = 100;
+    private bool isFirst = false;
+
+    void Update()
+    {
+        Movement();
+        Dash();
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Time.fixedDeltaTime = 0.01f;
+        staminaSlider.value = 100;
     }
-
-
-    void Update()
+    private void Movement()
     {
         //rewrited charecter movement
         dirMov = Vector3.zero;
 
-        if(Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             dirMov.x = -1;
         }
-        else if(Input.GetKey(KeyCode.D)) 
+        else if (Input.GetKey(KeyCode.D))
         {
             dirMov.x = 1;
         }
-        
-        if(Input.GetKey(KeyCode.W))
+
+        if (Input.GetKey(KeyCode.W))
         {
             dirMov.y = 1;
         }
-        else if(Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
             dirMov.y = -1;
         }
@@ -62,29 +70,43 @@ public class Walk : MonoBehaviour
 
         animator.SetFloat("Horizontal", dir.x);
         animator.SetFloat("Vertical", dir.y);
+    }
 
-        
+    private void Dash()
+    {
 
-
-        //Dash implementation
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            if ((dashCoolCounter <= 0) && (dashCounter <= 0))
+            if (dashCoolCounter <= 0f && dashCounter <= 0f)
             {
+                isFirst = true;
+                staminaValue = 100;
                 activeSpeed = dashSpeed;
                 dashCounter = dashDuration;
             }
         }
+
         if (dashCounter > 0)
         {
             dashCounter -= Time.deltaTime;
             dashCoolCounter = dashCooldown;
         }
         else
+        {
             activeSpeed = speed;
+        }
+
         if (dashCoolCounter > 0)
         {
             dashCoolCounter -= Time.deltaTime;
+            staminaValue = Mathf.Lerp(100f, 0f, dashCoolCounter / dashCooldown);
+            staminaSlider.value = staminaValue;
+        }
+
+      
+        if (dashCoolCounter <= 0 && isFirst == true)
+        {
+            staminaValue = Mathf.Lerp(100f, 0f, 1 - dashDuration / dashCounter);
         }
     }
 
