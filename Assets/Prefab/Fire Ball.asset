@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeTime: 0
   cooldownTime: 0
+  fireBall: {fileID: 1155590757562616526, guid: 2046459536553e047b014fc762dc418b,
+    type: 3}
