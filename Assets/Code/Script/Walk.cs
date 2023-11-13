@@ -7,8 +7,9 @@ public class Walk : MonoBehaviour
     [SerializeField] public float speed;
     [SerializeField] Slider staminaSlider;
     Vector3 dir = Vector3.zero;
-    public Vector3 dirMov = Vector3.zero;
+    private Vector3 dirMov = Vector3.zero;
     Vector3 prevDirMov = Vector3.zero;
+    public Vector3 Dir { get { return dir; } }
     float scSpeed = 1f;
 
     public Rigidbody2D rb;
@@ -29,11 +30,12 @@ public class Walk : MonoBehaviour
     void Update()
     {
         Movement();
-        Dash();
+        Dash(false);
     }
 
     private void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         Time.fixedDeltaTime = 0.01f;
         staminaSlider.value = 100;
@@ -72,10 +74,10 @@ public class Walk : MonoBehaviour
         animator.SetFloat("Vertical", dir.y);
     }
 
-    private void Dash()
+    public void Dash(bool isDashed)
     {
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (isDashed)
         {
             if (dashCoolCounter <= 0f && dashCounter <= 0f)
             {

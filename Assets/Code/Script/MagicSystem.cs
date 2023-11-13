@@ -9,7 +9,9 @@ public class MagicSystem : MonoBehaviour
     public enum Elements
     {
         Fire,
-        Wind
+        Wind,
+        Stone,
+        Water
     }
     const int maxElem = 2;
 

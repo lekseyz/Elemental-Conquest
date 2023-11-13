@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FireBallScript : MonoBehaviour
 {
-    float speed = 10f;
-    Vector3 dir { set; get; }
+    public float speed = 10f;
+    public Vector3 dir;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,16 @@ public class FireBallScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;  
+        //dir = new Vector3(Mathf.Cos(transform.rotation.z), Mathf.Sin(transform.rotation.z), 0);
+        transform.position += dir * speed * Time.deltaTime;  
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag != "Player")
+        {
+            Destroy(gameObject);
+
+        }
     }
 }

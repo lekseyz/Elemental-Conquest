@@ -7,12 +7,13 @@ public class Attack : MonoBehaviour
     [SerializeField] private MagicSystem ms;
     Dictionary<string, BasicSpell> magics = new Dictionary<string, BasicSpell>();
     public BasicSpell fb;
-
+    
     private void Start()
     {
         ms = GetComponent<MagicSystem>();
 
-        magics.Add("f", fb);
+        magics.Add("ff", fb);
+        magics.Add("ww", new Dash());
     }
 
     private void Update()
@@ -44,7 +45,7 @@ public class Attack : MonoBehaviour
         BasicSpell spell;
 
         if(magics.TryGetValue(comb, out spell)) {
-            spell.activate(this.gameObject);
+            spell.activate(this.gameObject, GetComponent<Walk>().Dir);
         }
     }
 }
