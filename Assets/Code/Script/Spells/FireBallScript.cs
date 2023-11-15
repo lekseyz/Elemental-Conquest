@@ -6,7 +6,6 @@ public class FireBallScript : MonoBehaviour
 {
     public float speed = 10f;
     public Vector3 dir;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +21,10 @@ public class FireBallScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+       
         if (other.gameObject.tag != "Player")
         {
+            
             Destroy(gameObject);
 
         }
