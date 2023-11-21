@@ -128,10 +128,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 73
+        width: 49
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Spriteattack_1
       rect:
         serializedVersion: 2
-        x: 73
+        x: 74
         y: 0
-        width: 73
+        width: 51
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,10 +170,10 @@ TextureImporter:
         serializedVersion: 2
         x: 146
         y: 0
-        width: 73
+        width: 50
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: Spriteattack_3
       rect:
         serializedVersion: 2
-        x: 219
+        x: 228
         y: 0
-        width: 73
+        width: 64
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

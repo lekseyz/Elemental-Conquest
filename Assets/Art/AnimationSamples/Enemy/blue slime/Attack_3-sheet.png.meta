@@ -128,11 +128,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 61
+        width: 53
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 54, w: 0}
+      border: {x: 0, y: 0, z: 53, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -147,9 +147,9 @@ TextureImporter:
       name: Attack_3-sheet_1
       rect:
         serializedVersion: 2
-        x: 113
+        x: 121
         y: 0
-        width: 72
+        width: 57
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -168,9 +168,9 @@ TextureImporter:
       name: Attack_3-sheet_2
       rect:
         serializedVersion: 2
-        x: 249
+        x: 254
         y: 0
-        width: 75
+        width: 66
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -189,9 +189,9 @@ TextureImporter:
       name: Attack_3-sheet_3
       rect:
         serializedVersion: 2
-        x: 376
+        x: 385
         y: 0
-        width: 76
+        width: 63
         height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
