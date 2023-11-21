@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6fc18fd3eb6604b4f8fd47ff7456293a
+guid: 8732362aa0b0a474a89c9aee7724577d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hurt-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 114.5
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b86457e1ed52c147988482d06f178b5
+      internalID: -1411078959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 114.5
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3abfa097ba6ff7479ad7f73b993b6ce
+      internalID: -592797485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 114.5
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2457471044d76f74c9d351f27b55a0c0
+      internalID: 724100325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 114.5
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f07250b5b53a9478a4acf757bd073c
+      internalID: 144311780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 114.5
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3682e5c637401f54db9765c9b762d8a0
+      internalID: -486068994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 0
+        width: 114.5
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825f91c75e4ede543ab33a1a41c68b8b
+      internalID: 446656054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hurt-sheet_0: -1411078959
+      Hurt-sheet_1: -592797485
+      Hurt-sheet_2: 724100325
+      Hurt-sheet_3: 144311780
+      Hurt-sheet_4: -486068994
+      Hurt-sheet_5: 446656054
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
