@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Patroler : MonoBehaviour
 {
-
     [SerializeField] public float speed;
     [SerializeField] public float findDistance;
     public List<Transform> points = new List<Transform>();
-
+    public Animator animator;
     Transform player;
-    private int currentPointIndex;
-    bool chill = false;
+    int currentPointIndex;
     bool angry = false;
-    bool goback = false;
+    bool attack = false;
+    bool jump = false;
+    bool idle = true;
+
     void Start()
     {
         currentPointIndex = Random.Range(0, points.Count);
@@ -23,48 +22,68 @@ public class Patroler : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(currentPointIndex + "    " + points[currentPointIndex].position);
-        if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && angry == false)
+        UpdateAnimatorBooleans();
+        Check();
+    }
+
+     void UpdateAnimatorBooleans()
+    {
+        animator.SetBool("Jump", jump);
+        animator.SetBool("Attack", attack);
+        animator.SetBool("Idle", idle);
+    }
+
+    void Check()
+    {  
+       
+        if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && Vector2.Distance(transform.position, player.position) > findDistance)
         {
             currentPointIndex = Random.Range(0, points.Count);
-            chill = true;
-        
+            idle = true;
+            jump = false;
         }
 
-        if (Vector2.Distance(transform.position, player.position) < findDistance)
+        if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1.2f  && Vector2.Distance(transform.position, player.position) < 3f)
         {
             angry = true;
-            chill = false;
-            goback = false;
+            idle = false;
+            attack = false;
         }
 
-        if (Vector2.Distance(transform.position, player.position) > findDistance)
+        if (Vector2.Distance(transform.position, player.position) < 1.2f)
         {
-            goback = true;
             angry = false;
+            attack = true;
+            jump = false;
         }
 
-        if (chill == true)
+        if (Vector2.Distance(transform.position, player.position) > 3f && Vector2.Distance(transform.position, player.position) < 7f)
         {
-            Chill();
+            angry = false;
+            attack = false;
+            jump = true;
         }
 
-        else
         if (angry == true)
         {
             Angry();
         }
-        
-        else
-        if (goback == true)
-        {
-            goBack();
-        }
-    }
 
-    void Chill()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
+        if (jump == true)
+        {
+            Jump();
+        } 
+
+        if (idle == true)
+        {
+            Idle();
+        }
+
+        if (attack == true)
+        {
+            Attack();
+        }
+
     }
     void Angry()
     {
@@ -72,9 +91,22 @@ public class Patroler : MonoBehaviour
         speed = 4;
     }
 
-    void goBack()
+    void Idle()
     {
-        speed = 1;
+        speed = 1f;
         transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
     }
+    void Attack()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        speed = 3f;
+    }
+
+    void Jump()
+    {
+      
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);  speed = 7f;
+    }
+
+  
 }
