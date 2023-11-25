@@ -8,7 +8,7 @@ public class Walk : MonoBehaviour
 
     [SerializeField] public float speed;
     [SerializeField] Slider staminaSlider;
-    Vector3 dir = Vector3.zero;
+    Vector3 dir = Vector3.down;
     private Vector3 dirMov = Vector3.zero;
     Vector3 prevDirMov = Vector3.zero;
     public Vector3 Dir { get { return dir; } }
