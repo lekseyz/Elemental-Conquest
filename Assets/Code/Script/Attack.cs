@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    [SerializeField] Instantiator instantiator;
     [SerializeField] private MagicSystem ms;
     Dictionary<string, BasicSpell> magics = new Dictionary<string, BasicSpell>();
     public BasicSpell fb;
@@ -13,7 +14,8 @@ public class Attack : MonoBehaviour
         ms = GetComponent<MagicSystem>();
 
         magics.Add("ff", fb);
-        magics.Add("ww", new Dash());
+        magics.Add("ww", (BasicSpell)ScriptableObject.CreateInstance("Dash"));
+        magics.Add("w", (BasicSpell)ScriptableObject.CreateInstance("Wind"));
     }
 
     private void Update()
@@ -45,7 +47,7 @@ public class Attack : MonoBehaviour
         BasicSpell spell;
 
         if(magics.TryGetValue(comb, out spell)) {
-            spell.activate(this.gameObject, GetComponent<Walk>().Dir);
+            instantiator.instatiateMagic(spell);
         }
     }
 }

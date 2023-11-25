@@ -21,7 +21,11 @@ public class FireBallScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
+        if (other.gameObject.tag == "Interactable")
+        {
+            other.gameObject.GetComponent<Interactable>().applyFireBall();
+        }
+
         if (other.gameObject.tag != "Player")
         {
             

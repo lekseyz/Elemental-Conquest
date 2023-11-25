@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Walk : MonoBehaviour
 {
+    [SerializeField]GameObject magicAplier;
+
     [SerializeField] public float speed;
     [SerializeField] Slider staminaSlider;
     Vector3 dir = Vector3.zero;
@@ -30,6 +32,7 @@ public class Walk : MonoBehaviour
     void Update()
     {
         Movement();
+        magicAplier.GetComponent<Instantiator>().setPosition(dir);
         Dash(false);
     }
 
@@ -64,7 +67,6 @@ public class Walk : MonoBehaviour
         }
 
         dirMov = Vector3.Lerp(prevDirMov, dirMov, scSpeed);
-        prevDirMov = dirMov;
 
         dirMov = dirMov.normalized;
         dir = dirMov.magnitude > 0 ? dirMov : dir;

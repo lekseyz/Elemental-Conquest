@@ -7,5 +7,5 @@ public class BasicSpell : ScriptableObject
     public float activeTime;
     public float cooldownTime;
 
-    public virtual void activate(GameObject parent, Vector3 dir) { }
+    public virtual void activate(GameObject parent, Vector3 dir, float angle) { }
 }

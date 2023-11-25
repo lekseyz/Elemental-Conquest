@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Dash : BasicSpell
 {
-    public override void activate(GameObject parent, Vector3 dir)
+    GameObject player;
+    public override void activate(GameObject parent, Vector3 dir, float angle)
     {
-        parent.GetComponent<Walk>().Dash(true);
+        GameObject.Find("MainHero").GetComponent<Walk>().Dash(true);
     }
    
 }
