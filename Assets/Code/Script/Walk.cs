@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Walk : MonoBehaviour
 {
-    [SerializeField]GameObject magicAplier;
+    [SerializeField] GameObject magicAplier;
 
     [SerializeField] public float speed;
     [SerializeField] Slider staminaSlider;
@@ -38,7 +38,7 @@ public class Walk : MonoBehaviour
 
     private void Start()
     {
-        
+
         rb = GetComponent<Rigidbody2D>();
         Time.fixedDeltaTime = 0.01f;
         staminaSlider.value = 100;
@@ -107,7 +107,7 @@ public class Walk : MonoBehaviour
             staminaSlider.value = staminaValue;
         }
 
-      
+
         if (dashCoolCounter <= 0 && isFirst == true)
         {
             staminaValue = Mathf.Lerp(100f, 0f, 1 - dashDuration / dashCounter);
