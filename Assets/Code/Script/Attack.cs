@@ -8,7 +8,7 @@ public class Attack : MonoBehaviour
     [SerializeField] private MagicSystem ms;
     Dictionary<string, BasicSpell> magics = new Dictionary<string, BasicSpell>();
     public BasicSpell fb;
-    
+    public Animator animator;
     private void Start()
     {
         ms = GetComponent<MagicSystem>();
@@ -40,10 +40,15 @@ public class Attack : MonoBehaviour
 
     void applyAttack()
     {
+        
+        
         //Attack handling
         var comb = ms.getFinalCombination();
+        if (comb!= "ww")
+        {
+            animator.SetTrigger("Attack");
+        }
         Debug.Log("Attacked: " + comb);
-
         BasicSpell spell;
 
         if(magics.TryGetValue(comb, out spell)) {
