@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Instantiator : MonoBehaviour
 {
-    [SerializeField] float offset = 1;
+    [SerializeField] float offset;
     [SerializeField] float angle;
     Vector3 dir;
 
@@ -30,6 +30,8 @@ public class Instantiator : MonoBehaviour
 
     private float getAngle(Vector2 dir)
     {
+        if(dir.magnitude == 0) return 0;
+
         float asin = Mathf.Asin(dir.y / dir.magnitude);
         float acos = Mathf.Acos(dir.x / dir.magnitude);
 
