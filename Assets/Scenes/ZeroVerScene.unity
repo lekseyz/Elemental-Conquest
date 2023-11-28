@@ -21209,6 +21209,13 @@ MonoBehaviour:
   instantiator: {fileID: 1412428471}
   ms: {fileID: 0}
   fb: {fileID: 11400000, guid: 10b6b96e3ceb746499d4cd14de3136f2, type: 2}
+  animator: {fileID: 1650266098}
+--- !u!95 &1650266098 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 782215872128960951, guid: 1bffacf56ca5abb4a9c589792880c7be,
+    type: 3}
+  m_PrefabInstance: {fileID: 52032432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1701857199
 GameObject:
   m_ObjectHideFlags: 0
