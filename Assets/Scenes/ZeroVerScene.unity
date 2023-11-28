@@ -21479,7 +21479,6 @@ MonoBehaviour:
   instantiator: {fileID: 1412428471}
   ms: {fileID: 0}
   fb: {fileID: 11400000, guid: 10b6b96e3ceb746499d4cd14de3136f2, type: 2}
-  animator: {fileID: 0}
   animator: {fileID: 1650266098}
 --- !u!95 &1650266098 stripped
 Animator:
