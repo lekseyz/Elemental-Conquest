@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 158466850}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16722,7 +16722,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -21546,7 +21546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf05377bf94d2924f8c35acfe2948d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 0.1
+  offset: 0.3
   angle: 0
 --- !u!1 &1440284724
 GameObject:

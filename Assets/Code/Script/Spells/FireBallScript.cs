@@ -27,7 +27,7 @@ public class FireBallScript : MonoBehaviour
             other.gameObject.GetComponent<Interactable>().applyFireBall();
         }
 
-        if (other.gameObject.tag != "Player")
+        if (other.gameObject.tag != "Lava" && other.gameObject.tag != "Player")
         {
             
             Destroy(gameObject);
