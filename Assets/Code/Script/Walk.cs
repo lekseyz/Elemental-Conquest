@@ -1,5 +1,5 @@
 using System;
-using UnityEngine.Timeline;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.UI;
 public class Walk : MonoBehaviour
@@ -65,6 +65,11 @@ public class Walk : MonoBehaviour
         {
             dirMov.y = -1;
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
 
         dirMov = Vector3.Lerp(prevDirMov, dirMov, scSpeed);
 
