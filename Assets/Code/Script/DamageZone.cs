@@ -6,18 +6,21 @@ public class DamageZone : MonoBehaviour
 {
     [SerializeField] private int damage;
     [SerializeField] private float damageRate;
-
     private Destructible destructible;
     private float timer;
     private void Update()
     {
-        timer += Time.deltaTime;
+        if (!Patroler.enemyDie)
+        {
+            timer += Time.deltaTime;
         if (timer >= damageRate)
         {
             if (destructible != null)
             destructible.ApplyDamage(damage);
             timer = 0;
         }
+        }
+          
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
