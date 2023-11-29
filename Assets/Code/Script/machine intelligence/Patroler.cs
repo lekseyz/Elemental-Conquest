@@ -6,6 +6,7 @@ public class Patroler : MonoBehaviour
     [SerializeField] public float speed;
     [SerializeField] public float findDistance;
     public List<Transform> points = new List<Transform>();
+    public static bool enemyDie = false;
     public Animator animator;
     Transform player;
     int currentPointIndex;
@@ -13,7 +14,6 @@ public class Patroler : MonoBehaviour
     bool attack = false;
     bool jump = false;
     bool idle = true;
-
     void Start()
     {
         currentPointIndex = Random.Range(0, points.Count);
@@ -35,54 +35,63 @@ public class Patroler : MonoBehaviour
 
     void Check()
     {  
+        if (!Patroler.enemyDie) 
+        {
+            if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && Vector2.Distance(transform.position, player.position) > findDistance)
+            {
+                currentPointIndex = Random.Range(0, points.Count);
+                idle = true;
+                jump = false;
+            }
+
+            if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1.2f && Vector2.Distance(transform.position, player.position) < 3f)
+            {
+                angry = true;
+                idle = false;
+                attack = false;
+            }
+
+            if (Vector2.Distance(transform.position, player.position) < 1.2f)
+            {
+                angry = false;
+                attack = true;
+                jump = false;
+            }
+
+            if (Vector2.Distance(transform.position, player.position) > 3f && Vector2.Distance(transform.position, player.position) < 7f)
+            {
+                angry = false;
+                attack = false;
+                jump = true;
+            }
+
+            if (angry == true)
+            {
+                Angry();
+            }
+
+            if (jump == true)
+            {
+                Jump();
+            }
+
+            if (idle == true)
+            {
+                Idle();
+            }
+
+            if (attack == true)
+            {
+                Attack();
+            }
+        }
+        else
+        {
+            speed = 0;
+        }
+          
        
-        if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && Vector2.Distance(transform.position, player.position) > findDistance)
-        {
-            currentPointIndex = Random.Range(0, points.Count);
-            idle = true;
-            jump = false;
-        }
-
-        if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1.2f  && Vector2.Distance(transform.position, player.position) < 3f)
-        {
-            angry = true;
-            idle = false;
-            attack = false;
-        }
-
-        if (Vector2.Distance(transform.position, player.position) < 1.2f)
-        {
-            angry = false;
-            attack = true;
-            jump = false;
-        }
-
-        if (Vector2.Distance(transform.position, player.position) > 3f && Vector2.Distance(transform.position, player.position) < 7f)
-        {
-            angry = false;
-            attack = false;
-            jump = true;
-        }
-
-        if (angry == true)
-        {
-            Angry();
-        }
-
-        if (jump == true)
-        {
-            Jump();
-        } 
-
-        if (idle == true)
-        {
-            Idle();
-        }
-
-        if (attack == true)
-        {
-            Attack();
-        }
+        
 
     }
     void Angry()
@@ -104,8 +113,7 @@ public class Patroler : MonoBehaviour
 
     void Jump()
     {
-      
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);  speed = 7f;
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);  speed = 5f;
     }
 
   

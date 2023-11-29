@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,14 @@ using UnityEngine;
 public class BlueSlime : Interactable
 {
     [SerializeField] SliderController controller;
+    private float timerDuration = 1.5f;
+    private bool isTimerRunning;
+    public Animator animator;
 
-    private void Start()
+private void Start()
     {
         controller = GetComponentInChildren<SliderController>();
+        isTimerRunning = false;
     }
 
     float HP = 100;
@@ -16,19 +21,29 @@ public class BlueSlime : Interactable
 
     private void Update()
     {
-        if (currentHP < 0) {
-            Destroy(gameObject);
+        if (currentHP <= 0)
+        {
+            Patroler.enemyDie = true;
+            animator.SetBool("Die", Patroler.enemyDie);
+            StartCoroutine(DisappearTimer());
         }
     }
 
-    override public void applyFireBall()
+    public override void applyFireBall()
     {
-        currentHP -= 20;
+        currentHP -= 25;
         controller.UpdateSliderVal(currentHP, HP);
     }
 
-    override public void applyWind(Vector2 dir)
+    public override void applyWind(Vector2 dir)
     {
 
+    }
+
+    IEnumerator DisappearTimer()
+    {
+        isTimerRunning = true;
+        yield return new WaitForSeconds(timerDuration);
+        Destroy(gameObject);
     }
 }

@@ -19,7 +19,7 @@ public class Torch : Interactable
 
     private void Update()
     {
-        torchSound.volume = 1f - Mathf.Clamp01(Vector2.Distance(transform.position, soundObject.position) / maxDistance);
+        torchSound.volume = 0.8f - Mathf.Clamp01(Vector2.Distance(transform.position, soundObject.position) / maxDistance);
     }
 
     override public void applyWind(Vector2 dir)
