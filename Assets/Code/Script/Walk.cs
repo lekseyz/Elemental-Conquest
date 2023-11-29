@@ -1,5 +1,5 @@
 using System;
-using UnityEditor.Timeline.Actions;
+using UnityEngine.Timeline;
 using UnityEngine;
 using UnityEngine.UI;
 public class Walk : MonoBehaviour
