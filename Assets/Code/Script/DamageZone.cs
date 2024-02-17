@@ -10,15 +10,13 @@ public class DamageZone : MonoBehaviour
     private float timer;
     private void Update()
     {
-        if (!Patroler.enemyDie)
-        {
+        
             timer += Time.deltaTime;
         if (timer >= damageRate)
         {
             if (destructible != null)
             destructible.ApplyDamage(damage);
             timer = 0;
-        }
         }
           
     }
