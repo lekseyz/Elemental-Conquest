@@ -8,6 +8,7 @@ public class Destructible : MonoBehaviour
     public UnityEvent ChangeHP;
     private int hitPoints;
     bool isTakeDamage;
+    public bool isShielded;
     private float timer;
     private float maxTimer = 1f;
     private void Start()
@@ -16,19 +17,20 @@ public class Destructible : MonoBehaviour
         hitPoints = maxHitPoints;
         ChangeHP.Invoke();
     }
-
+   
     public void ApplyDamage(int damage)
     {
-
-        isTakeDamage = true;
-        hitPoints -= damage;
-        image.SetActive(true);
-        ChangeHP.Invoke();
-        if (hitPoints <= 0)
+        if (!isShielded)
         {
-            Kill();
+            isTakeDamage = true;
+            hitPoints -= damage;
+            image.SetActive(true);
+            ChangeHP.Invoke();
+            if (hitPoints <= 0)
+            {
+                Kill();
+            }
         }
-
     }
 
     private void Update()

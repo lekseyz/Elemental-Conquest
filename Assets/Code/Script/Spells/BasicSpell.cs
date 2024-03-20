@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BasicSpell : ScriptableObject
 {
-    public float activeTime;
-    public float cooldownTime;
+    float lastTimeActivation;
+    float activeTime;
+    float cooldownTime;
 
     public virtual void activate(GameObject parent, Vector3 dir, float angle) { }
 }
