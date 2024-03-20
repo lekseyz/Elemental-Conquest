@@ -65,10 +65,7 @@ public class Walk : MonoBehaviour
         {
             dirMov.y = -1;
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        
 
 
         dirMov = Vector3.Lerp(prevDirMov, dirMov, scSpeed);
