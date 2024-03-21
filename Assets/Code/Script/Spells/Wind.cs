@@ -10,7 +10,9 @@ public class Wind : BasicSpell
         var cols = parent.GetComponent<HitBox>();
         foreach(var col in cols.colliders)
         {
-            col.gameObject.GetComponent<Interactable>().applyWind(new Vector2(dir.x, dir.y));
+            var newDir = col.transform.position - parent.gameObject.transform.position;
+            newDir = newDir.normalized;
+            col.gameObject.GetComponent<Interactable>().applyWind(new Vector2(newDir.x, newDir.y));
         }
     }
 }

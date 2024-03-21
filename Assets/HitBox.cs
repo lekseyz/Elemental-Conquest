@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HitBox : MonoBehaviour
 {
-    public SortedSet<Collider2D> colliders = new SortedSet<Collider2D>();
+    public HashSet<Collider2D> colliders = new HashSet<Collider2D>();
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
