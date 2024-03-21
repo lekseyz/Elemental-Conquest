@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: 38c4a0cd0214ce54986f782ce95f2600
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: IceKnightSideWalk_Frame_0
+    originalName: 
+    pivot: {x: 0.7045455, y: -0.26136366}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 194
+      width: 88
+      height: 88
+    spriteID: 0d1be8e1a466804478a81a0d66148e20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 194}
+  - name: IceKnightSideWalk_Frame_1
+    originalName: 
+    pivot: {x: 0.7111111, y: -0.29069766}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 290
+      width: 90
+      height: 86
+    spriteID: 3e93f67fd58fb2f47a123ced3db90c9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 290}
+  - name: IceKnightSideWalk_Frame_2
+    originalName: 
+    pivot: {x: 0.7093023, y: -0.29069766}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 99
+      width: 86
+      height: 86
+    spriteID: dbebdecba93a3254793498b233d9b145
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 99}
+  - name: IceKnightSideWalk_Frame_3
+    originalName: 
+    pivot: {x: 0.72727275, y: -0.25842696}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 198
+      width: 88
+      height: 89
+    spriteID: 08806eb1600f5cf4fbda264e6a631af6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 198}
+  - name: IceKnightSideWalk_Frame_4
+    originalName: 
+    pivot: {x: 0.72727275, y: -0.28735632}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 384
+      width: 88
+      height: 87
+    spriteID: e5289da34334cc64e914c4acf708bed9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 384}
+  - name: IceKnightSideWalk_Frame_5
+    originalName: 
+    pivot: {x: 0.71910113, y: -0.2840909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 295
+      width: 89
+      height: 88
+    spriteID: 81aef3815408e354f970dfdd91a5ee9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 295}
+  - name: IceKnightSideWalk_Frame_6
+    originalName: 
+    pivot: {x: 0.7111111, y: -0.28735632}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 391
+      width: 90
+      height: 87
+    spriteID: 12b89b5594e51fc499718a17ad61a92b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 391}
+  - name: IceKnightSideWalk_Frame_7
+    originalName: 
+    pivot: {x: 0.7032967, y: -0.28735632}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 99
+      width: 91
+      height: 87
+    spriteID: 3fbcd46eac6f25d43a4406f3db0d9a17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 99}
+  - name: IceKnightSideWalk_Frame_8
+    originalName: 
+    pivot: {x: 0.6956522, y: -0.28735632}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 102
+      y: 4
+      width: 92
+      height: 87
+    spriteID: 51c77d80eead09d438038f2eb535e695
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 102, y: 4}
+  - name: IceKnightSideWalk_Frame_9
+    originalName: 
+    pivot: {x: 0.7159091, y: -0.28735632}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 4
+      width: 88
+      height: 87
+    spriteID: 1bc9fdca4b117774199654e94ec3505a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 4}
+  - name: IceKnightSideWalk_Frame_10
+    originalName: 
+    pivot: {x: 0.7078652, y: -0.24719101}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 101
+      width: 89
+      height: 89
+    spriteID: 428d88f5e7e841142aa863f2fa6e8c95
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 101}
+  - name: IceKnightSideWalk_Frame_11
+    originalName: 
+    pivot: {x: 0.7111111, y: -0.24719101}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 90
+      height: 89
+    spriteID: 93c704ef402646c47ba357a1ba360f40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1111758934
+    name: IceKnightSideWalk
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: IceKnightSideWalk_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 2
+        y: 23
+        width: 88
+        height: 88
+      spriteId: 0d1be8e1a466804478a81a0d66148e20
+    - name: IceKnightSideWalk_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 25
+        width: 90
+        height: 86
+      spriteId: 3e93f67fd58fb2f47a123ced3db90c9c
+    - name: IceKnightSideWalk_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 3
+        y: 25
+        width: 86
+        height: 86
+      spriteId: dbebdecba93a3254793498b233d9b145
+    - name: IceKnightSideWalk_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 23
+        width: 88
+        height: 89
+      spriteId: 08806eb1600f5cf4fbda264e6a631af6
+    - name: IceKnightSideWalk_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 25
+        width: 88
+        height: 87
+      spriteId: e5289da34334cc64e914c4acf708bed9
+    - name: IceKnightSideWalk_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 25
+        width: 89
+        height: 88
+      spriteId: 81aef3815408e354f970dfdd91a5ee9f
+    - name: IceKnightSideWalk_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 25
+        width: 90
+        height: 87
+      spriteId: 12b89b5594e51fc499718a17ad61a92b
+    - name: IceKnightSideWalk_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 25
+        width: 91
+        height: 87
+      spriteId: 3fbcd46eac6f25d43a4406f3db0d9a17
+    - name: IceKnightSideWalk_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 25
+        width: 92
+        height: 87
+      spriteId: 51c77d80eead09d438038f2eb535e695
+    - name: IceKnightSideWalk_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 1
+        y: 25
+        width: 88
+        height: 87
+      spriteId: 1bc9fdca4b117774199654e94ec3505a
+    - name: IceKnightSideWalk_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 1
+        y: 22
+        width: 89
+        height: 89
+      spriteId: 428d88f5e7e841142aa863f2fa6e8c95
+    - name: IceKnightSideWalk_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 22
+        width: 90
+        height: 89
+      spriteId: 93c704ef402646c47ba357a1ba360f40
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 128, y: 128}
