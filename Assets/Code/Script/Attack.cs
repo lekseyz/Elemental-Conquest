@@ -16,6 +16,7 @@ public class Attack : MonoBehaviour
         magics.Add("ff", fb);
         magics.Add("ww", (BasicSpell)ScriptableObject.CreateInstance("Dash"));
         magics.Add("w", (BasicSpell)ScriptableObject.CreateInstance("Wind"));
+        magics.Add("s", (BasicSpell)ScriptableObject.CreateInstance("IceShield"));
     }
 
     private void Update()
@@ -30,6 +31,9 @@ public class Attack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
             ms.addElem(MagicSystem.Elements.Wind);
+
+        if (Input.GetKeyDown(KeyCode.L))
+            ms.addElem(MagicSystem.Elements.Stone);
 
         if (Input.GetKeyDown(KeyCode.Space))
             applyAttack();
@@ -51,7 +55,8 @@ public class Attack : MonoBehaviour
         Debug.Log("Attacked: " + comb);
         BasicSpell spell;
 
-        if(magics.TryGetValue(comb, out spell)) {
+        if(magics.TryGetValue(comb, out spell)) 
+        {
             instantiator.instatiateMagic(spell);
         }
     }

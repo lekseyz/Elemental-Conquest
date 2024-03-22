@@ -37,7 +37,8 @@ private void Start()
 
     public override void applyWind(Vector2 dir)
     {
-
+        var rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.AddForce((new Vector2(dir.x, dir.y) * 1500), ForceMode2D.Force);
     }
 
     IEnumerator DisappearTimer()

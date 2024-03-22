@@ -45,6 +45,15 @@ public class MagicSystem : MonoBehaviour
                 case Elements.Wind:
                     combination += "w";
                     break;
+                case Elements.Stone: 
+                    combination += "s";
+                    break;
+                case Elements.Water:
+                    combination += "t";
+                    break;
+                default:
+                    combination += "";
+                    break;
                    
             }
         }

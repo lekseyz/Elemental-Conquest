@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Wind : BasicSpell
 {
-    override public void activate(GameObject parent, Vector3 dir, float angle) {
+    override public void activate(GameObject parent, Vector3 dir, float angle)
+    {
         parent.GetComponent<ParticleSystem>().Emit(200);
+        var cols = parent.GetComponent<HitBox>();
+        foreach(var col in cols.colliders)
+        {
+            var newDir = col.transform.position - parent.gameObject.transform.position;
+            newDir = newDir.normalized;
+            col.gameObject.GetComponent<Interactable>().applyWind(new Vector2(newDir.x, newDir.y));
+        }
     }
 }
