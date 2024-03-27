@@ -27,4 +27,7 @@ public class Torch : Interactable
         torchAnimator.SetBool("isActive", false);
         torchSound.Stop();
     }
+    public override void applyStone()
+    {
+    }
 }

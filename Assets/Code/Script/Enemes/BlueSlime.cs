@@ -40,7 +40,11 @@ private void Start()
         var rb = gameObject.GetComponent<Rigidbody2D>();
         rb.AddForce((new Vector2(dir.x, dir.y) * 1500), ForceMode2D.Force);
     }
-
+    public override void applyStone()
+    {
+        currentHP -=50;
+        controller.UpdateSliderVal(currentHP, HP);
+    }
     IEnumerator DisappearTimer()
     {
         isTimerRunning = true;
