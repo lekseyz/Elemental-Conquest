@@ -68,4 +68,3 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/Scenes/playground.unity
 Assets/Scenes/playground.unity.meta
-*.meta

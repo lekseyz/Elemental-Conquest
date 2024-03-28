@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: baa594b02c8532a40ad22252f0ddd126
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: IceGolemWalk_Frame_0
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.07017544}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 70
+      width: 60
+      height: 57
+    spriteID: 607ce3d6b0e629c49955c8e141cae919
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 70}
+  - name: IceGolemWalk_Frame_1
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 391
+      width: 60
+      height: 54
+    spriteID: 60b81b604bc2c6c4ea86cbe63d22882e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 391}
+  - name: IceGolemWalk_Frame_2
+    originalName: 
+    pivot: {x: 0.49180326, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 190
+      width: 61
+      height: 54
+    spriteID: 0c70463129470ff4facda8b6392ea7fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 190}
+  - name: IceGolemWalk_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.0925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 4
+      width: 62
+      height: 54
+    spriteID: d8d351d31e50dba47982cba1327423bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 4}
+  - name: IceGolemWalk_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.0925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 66
+      width: 62
+      height: 54
+    spriteID: 66adda580c3b07f43af2f54219f53c8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 66}
+  - name: IceGolemWalk_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.0925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 128
+      width: 62
+      height: 54
+    spriteID: 4ac1276e40464db4592bcbf9e1b6bf22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 128}
+  - name: IceGolemWalk_Frame_6
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.090909086}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 328
+      width: 60
+      height: 55
+    spriteID: 90252a8e2a2d30645a9e1ee3606ef8ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 328}
+  - name: IceGolemWalk_Frame_7
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 135
+      width: 60
+      height: 56
+    spriteID: 745737f2db4fba641830a0bb8685bff9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 135}
+  - name: IceGolemWalk_Frame_8
+    originalName: 
+    pivot: {x: 0.4754098, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 61
+      height: 56
+    spriteID: 62f5e8cb7a63da744aef9f11cc7f13f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: IceGolemWalk_Frame_9
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.051724136}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 60
+      height: 58
+    spriteID: fba3f5610b99ef8439ecc844080f3ebd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: IceGolemWalk_Frame_10
+    originalName: 
+    pivot: {x: 0.45762712, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 264
+      width: 59
+      height: 56
+    spriteID: e80082167590f9a45955292fa7aee5d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 264}
+  - name: IceGolemWalk_Frame_11
+    originalName: 
+    pivot: {x: 0.4827586, y: -0.07017544}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 199
+      width: 58
+      height: 57
+    spriteID: e94de920352b740479f0ccdeb8d81996
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 199}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1872859778
+    name: IceGolemWalk
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: IceGolemWalk_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 3
+        y: 4
+        width: 60
+        height: 57
+      spriteId: 607ce3d6b0e629c49955c8e141cae919
+    - name: IceGolemWalk_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 3
+        y: 6
+        width: 60
+        height: 54
+      spriteId: 60b81b604bc2c6c4ea86cbe63d22882e
+    - name: IceGolemWalk_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 2
+        y: 6
+        width: 61
+        height: 54
+      spriteId: 0c70463129470ff4facda8b6392ea7fb
+    - name: IceGolemWalk_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 1
+        y: 5
+        width: 62
+        height: 54
+      spriteId: d8d351d31e50dba47982cba1327423bf
+    - name: IceGolemWalk_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 1
+        y: 5
+        width: 62
+        height: 54
+      spriteId: 66adda580c3b07f43af2f54219f53c8c
+    - name: IceGolemWalk_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 1
+        y: 5
+        width: 62
+        height: 54
+      spriteId: 4ac1276e40464db4592bcbf9e1b6bf22
+    - name: IceGolemWalk_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 3
+        y: 5
+        width: 60
+        height: 55
+      spriteId: 90252a8e2a2d30645a9e1ee3606ef8ef
+    - name: IceGolemWalk_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 3
+        y: 4
+        width: 60
+        height: 56
+      spriteId: 745737f2db4fba641830a0bb8685bff9
+    - name: IceGolemWalk_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 3
+        y: 4
+        width: 61
+        height: 56
+      spriteId: 62f5e8cb7a63da744aef9f11cc7f13f2
+    - name: IceGolemWalk_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 4
+        y: 3
+        width: 60
+        height: 58
+      spriteId: fba3f5610b99ef8439ecc844080f3ebd
+    - name: IceGolemWalk_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 5
+        y: 4
+        width: 59
+        height: 56
+      spriteId: e80082167590f9a45955292fa7aee5d2
+    - name: IceGolemWalk_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 4
+        y: 4
+        width: 58
+        height: 57
+      spriteId: e94de920352b740479f0ccdeb8d81996
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
