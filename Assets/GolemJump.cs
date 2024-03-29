@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class GolemIdle : StateMachineBehaviour
+public class GolemJump : StateMachineBehaviour
 {
-    float speed = 1f;
+    float speed = 5;
     float jumpCoolDown = 5;
-    
+
     Transform player;
     Rigidbody2D golemRb;
 
@@ -22,20 +21,6 @@ public class GolemIdle : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //jumpCoolDown -= Time.deltaTime;
-        //if(jumpCoolDown <= 0)
-        //{
-        //    jumpCoolDown = 5;
-        //    if (Vector2.Distance(golemRb.position, player.position) > 5)
-        //    {
-        //        animator.SetTrigger("setJump");
-        //    }
-        //}
-
-        if(Vector2.Distance(golemRb.position, player.position) < 5)
-        {
-            animator.SetTrigger("setAttack");
-        }
         var targer = Vector2.MoveTowards(golemRb.position, player.position, speed * Time.fixedDeltaTime);
         golemRb.MovePosition(targer);
     }
@@ -43,8 +28,6 @@ public class GolemIdle : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("setAttack");
-        //animator.ResetTrigger("setJump");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
