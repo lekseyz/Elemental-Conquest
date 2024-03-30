@@ -15,10 +15,15 @@ public class Patroler : MonoBehaviour
     bool jump = false;
     bool idle = true;
 
+    private Destructible playerDestructible;
+
     void Start()
     {
         currentPointIndex = Random.Range(0, points.Count);
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        // Получаем компонент Destructible у игрока
+        playerDestructible = player.GetComponent<Destructible>();
     }
 
     void Update()
@@ -61,14 +66,14 @@ public class Patroler : MonoBehaviour
                 }
             }
 
-            if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1.2f && Vector2.Distance(transform.position, player.position) < 3f)
+            if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1f && Vector2.Distance(transform.position, player.position) < 3f)
             {
                 angry = true;
                 idle = false;
                 attack = false;
             }
 
-            if (Vector2.Distance(transform.position, player.position) < 1.2f)
+            if (Vector2.Distance(transform.position, player.position) < 1f)
             {
                 angry = false;
                 attack = true;
@@ -122,9 +127,19 @@ public class Patroler : MonoBehaviour
 
     void Attack()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        speed = 3f;
+        if (playerDestructible != null && !playerDestructible.isShielded && Vector2.Distance(transform.position, player.position) < findDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            speed = 3f;
+
+            // Проверяем, есть ли компонент Destructible у игрока, и вызываем ApplyDamage()
+            if (playerDestructible != null)
+            {
+                playerDestructible.ApplyDamage(10); //  наносит урон
+            }
+        }
     }
+
 
     void Jump()
     {
