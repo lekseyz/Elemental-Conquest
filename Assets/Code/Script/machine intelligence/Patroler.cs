@@ -14,6 +14,7 @@ public class Patroler : MonoBehaviour
     bool attack = false;
     bool jump = false;
     bool idle = true;
+
     void Start()
     {
         currentPointIndex = Random.Range(0, points.Count);
@@ -26,7 +27,7 @@ public class Patroler : MonoBehaviour
         Check();
     }
 
-     void UpdateAnimatorBooleans()
+    void UpdateAnimatorBooleans()
     {
         animator.SetBool("Jump", jump);
         animator.SetBool("Attack", attack);
@@ -34,14 +35,30 @@ public class Patroler : MonoBehaviour
     }
 
     void Check()
-    {  
-        if (!Patroler.enemyDie) 
+    {
+        if (!Patroler.enemyDie)
         {
-            if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && Vector2.Distance(transform.position, player.position) > findDistance)
+            if (!attack)
             {
-                currentPointIndex = Random.Range(0, points.Count);
-                idle = true;
-                jump = false;
+                if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && Vector2.Distance(transform.position, player.position) > findDistance)
+                {
+                    currentPointIndex = Random.Range(0, points.Count);
+                    idle = true;
+                    jump = false;
+                }
+
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+                foreach (Collider2D collider in colliders)
+                {
+                    if (collider.CompareTag("wall"))
+                    {
+                        if (Vector2.Distance(transform.position, collider.transform.position) < 2f)
+                        {
+                            transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
+                            return;
+                        }
+                    }
+                }
             }
 
             if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1.2f && Vector2.Distance(transform.position, player.position) < 3f)
@@ -89,11 +106,8 @@ public class Patroler : MonoBehaviour
         {
             speed = 0;
         }
-          
-       
-        
-
     }
+
     void Angry()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -105,6 +119,7 @@ public class Patroler : MonoBehaviour
         speed = 1f;
         transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
     }
+
     void Attack()
     {
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
@@ -113,8 +128,7 @@ public class Patroler : MonoBehaviour
 
     void Jump()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);  speed = 5f;
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        speed = 5f;
     }
-
-  
 }
