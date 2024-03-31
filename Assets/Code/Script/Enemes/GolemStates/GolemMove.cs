@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GolemIdle : StateMachineBehaviour
 {
-    float speed = 1f;
+    float speed = 0f;
     float jumpCoolDown = 5;
     
     Transform player;

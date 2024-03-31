@@ -8,7 +8,7 @@ public class IceGolemAttackHandler : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Destructible>().ApplyDamage(10);
+            collision.gameObject.GetComponent<Destructible>().ApplyDamage(0);
         }
     }
 }
