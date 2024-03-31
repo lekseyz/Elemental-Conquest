@@ -54,8 +54,10 @@ public class Attack : MonoBehaviour
         {
             if (comb == "ss")
                 animator.SetTrigger("RockCast");
+            else if (comb == "s")
+                animator.SetTrigger("Shield");
             else
-            animator.SetTrigger("Attack");
+                animator.SetTrigger("Attack");
         }
         Debug.Log("Attacked: " + comb);
         BasicSpell spell;

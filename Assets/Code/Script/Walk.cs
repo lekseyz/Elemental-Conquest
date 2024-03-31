@@ -38,16 +38,14 @@ public class Walk : MonoBehaviour
 
     private void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
         Time.fixedDeltaTime = 0.01f;
         staminaSlider.value = 100;
     }
     private void Movement()
     {
-        //rewrited charecter movement
+        //rewrited character movement
         dirMov = Vector3.zero;
-
         if (Input.GetKey(KeyCode.A))
         {
             dirMov.x = -1;
@@ -65,7 +63,6 @@ public class Walk : MonoBehaviour
         {
             dirMov.y = -1;
         }
-        
 
 
         dirMov = Vector3.Lerp(prevDirMov, dirMov, scSpeed);
@@ -117,7 +114,7 @@ public class Walk : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
+    { 
         rb.velocity = dirMov * activeSpeed;
     }
 }
