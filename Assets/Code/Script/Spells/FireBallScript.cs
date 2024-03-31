@@ -4,8 +4,6 @@ public class FireBallScript : MonoBehaviour
 {
     public float speed = 10f;
     public Vector3 dir;
-    public Boss boss; // ссылка на вашего босса
-    public float damageAmount = 20f; // количество урона, наносимого огненным шаром
 
     // Update is called once per frame
     void Update()
@@ -17,10 +15,10 @@ public class FireBallScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Interactable"))
         {
-            Boss boss = other.gameObject.GetComponent<Boss>();
-            if (boss != null)
+            var interactable = other.gameObject.GetComponent<Interactable>();
+            if (interactable != null)
             {
-                boss.TakeDamage(damageAmount); // вызываем метод TakeDamage на боссе
+                interactable.applyFireBall(); // вызываем метод TakeDamage на боссе
             }
         }
         else if (other.gameObject.CompareTag("Lava") || other.gameObject.CompareTag("Player") || other.gameObject.layer <= 1)

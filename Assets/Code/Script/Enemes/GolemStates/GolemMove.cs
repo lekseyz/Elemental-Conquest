@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class GolemIdle : StateMachineBehaviour
+public class pointIdle : StateMachineBehaviour
 {
-    float speed = 1f;
+    float speed = 3f;
     float jumpCoolDown = 5;
     
     Transform player;
-    Rigidbody2D golemRb;
+    Transform point;
+    Rigidbody2D golem;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindWithTag("Player").transform;
-        golemRb = animator.GetComponent<Rigidbody2D>();
+        golem = animator.gameObject.GetComponent<Rigidbody2D>();
+        point = GameObject.FindGameObjectWithTag("point").transform;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,18 +28,18 @@ public class GolemIdle : StateMachineBehaviour
         //if(jumpCoolDown <= 0)
         //{
         //    jumpCoolDown = 5;
-        //    if (Vector2.Distance(golemRb.position, player.position) > 5)
+        //    if (Vector2.Distance(pointRb.position, player.position) > 5)
         //    {
         //        animator.SetTrigger("setJump");
         //    }
         //}
-
-        if(Vector2.Distance(golemRb.position, player.position) < 5)
+        Debug.Log(Vector2.Distance(point.position, player.position));
+        if(Vector2.Distance(point.position, player.position) < 5)
         {
             animator.SetTrigger("setAttack");
         }
-        var targer = Vector2.MoveTowards(golemRb.position, player.position, speed * Time.fixedDeltaTime);
-        golemRb.MovePosition(targer);
+        var target = Vector2.MoveTowards(golem.position, player.position, speed * Time.fixedDeltaTime);
+        golem.MovePosition(target);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -7,6 +7,7 @@ TagManager:
   - Interactable
   - Wall
   - Lava
+  - point
   layers:
   - Default
   - TransparentFX
