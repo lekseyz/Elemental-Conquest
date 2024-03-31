@@ -28,6 +28,11 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         PauseGame = false;
+        GameObject MainHero = GameObject.Find("MainHero");
+        MainHero.GetComponent<Walk>().enabled = true;
+        MainHero.GetComponent<Attack>().enabled = true;
+        GameObject HideShow = GameObject.Find("BackGround Trigger");
+        HideShow.GetComponent<HideShowMenu>().enabled = true;
     }
 
     public void Pause()
@@ -35,6 +40,11 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         PauseGame = true;
+        GameObject MainHero = GameObject.Find("MainHero");
+        MainHero.GetComponent<Walk>().enabled = false;
+        MainHero.GetComponent<Attack>().enabled = false;
+        GameObject HideShow = GameObject.Find("BackGround Trigger");
+        HideShow.GetComponent<HideShowMenu>().enabled = false;
 
     }
 
@@ -43,6 +53,4 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("menu");
     }
-
-
 }
