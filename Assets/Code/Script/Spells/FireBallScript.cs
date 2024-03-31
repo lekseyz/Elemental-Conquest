@@ -1,36 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBallScript : MonoBehaviour
 {
     public float speed = 10f;
     public Vector3 dir;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Boss boss; // ссылка на вашего босса
+    public float damageAmount = 20f; // количество урона, наносимого огненным шаром
 
     // Update is called once per frame
     void Update()
     {
-        //dir = new Vector3(Mathf.Cos(transform.rotation.z), Mathf.Sin(transform.rotation.z), 0);
-        transform.position += dir * speed * Time.deltaTime;  
+        transform.position += dir * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Interactable")
+        if (other.gameObject.CompareTag("Interactable"))
         {
-            other.gameObject.GetComponent<Interactable>().applyFireBall();
+            Boss boss = other.gameObject.GetComponent<Boss>();
+            if (boss != null)
+            {
+                boss.TakeDamage(damageAmount); // вызываем метод TakeDamage на боссе
+            }
+        }
+        else if (other.gameObject.CompareTag("Lava") || other.gameObject.CompareTag("Player") || other.gameObject.layer <= 1)
+        {
+            // Ќичего не делаем, если объект не €вл€етс€ интерактивным и не наносит урон
+            return;
         }
 
-        if (other.gameObject.tag != "Lava" && other.gameObject.tag != "Player" && other.gameObject.layer > 1)
-        {
-            
-            Destroy(gameObject);
-
-        }
+        Destroy(gameObject); // ”ничтожаем огненный шар в любом случае
     }
 }
