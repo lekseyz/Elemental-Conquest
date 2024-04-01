@@ -58600,6 +58600,16 @@ PrefabInstance:
       propertyPath: staminaSlider
       value: 
       objectReference: {fileID: 849641358}
+    - target: {fileID: 5694707227918952775, guid: e4031de43506b3c419f45cb6fd78cffe,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694707227918952775, guid: e4031de43506b3c419f45cb6fd78cffe,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6494141902014695819, guid: e4031de43506b3c419f45cb6fd78cffe,
         type: 3}
       propertyPath: image
