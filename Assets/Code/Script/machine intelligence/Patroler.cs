@@ -43,29 +43,6 @@ public class Patroler : MonoBehaviour
     {
         if (!Patroler.enemyDie)
         {
-            if (!attack)
-            {
-                if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && Vector2.Distance(transform.position, player.position) > findDistance)
-                {
-                    currentPointIndex = Random.Range(0, points.Count);
-                    idle = true;
-                    jump = false;
-                }
-
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
-                foreach (Collider2D collider in colliders)
-                {
-                    if (collider.CompareTag("wall"))
-                    {
-                        if (Vector2.Distance(transform.position, collider.transform.position) < 2f)
-                        {
-                            transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
-                            return;
-                        }
-                    }
-                }
-            }
-
             if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1f && Vector2.Distance(transform.position, player.position) < 3f)
             {
                 angry = true;
