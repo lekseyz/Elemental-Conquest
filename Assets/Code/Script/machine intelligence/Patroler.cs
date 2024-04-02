@@ -66,14 +66,14 @@ public class Patroler : MonoBehaviour
                 }
             }
 
-            if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1f && Vector2.Distance(transform.position, player.position) < 3f)
+            if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 0.5f && Vector2.Distance(transform.position, player.position) < 3f)
             {
                 angry = true;
                 idle = false;
                 attack = false;
             }
 
-            if (Vector2.Distance(transform.position, player.position) < 1f)
+            if (Vector2.Distance(transform.position, player.position) < 0.5f)
             {
                 angry = false;
                 attack = true;
