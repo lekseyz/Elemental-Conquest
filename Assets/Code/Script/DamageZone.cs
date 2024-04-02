@@ -19,13 +19,19 @@ public class DamageZone : MonoBehaviour
         }
     }
 
-    public void setDistractible(Destructible destructible)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        this.destructible = destructible;
+        if (other.CompareTag("Player"))
+        {
+            destructible = other.GetComponent<Destructible>();
+        }
     }
 
-    public void resetDestractible()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        this.destructible = null;
+        if (other.CompareTag("Player") && destructible == other.GetComponent<Destructible>())
+        {
+            destructible = null;
+        }
     }
 }

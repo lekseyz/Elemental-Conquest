@@ -1,10 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 
 public class Patroler : MonoBehaviour
 {
-    private DamageZone dest;
     [SerializeField] public float speed;
     [SerializeField] public float findDistance;
     public List<Transform> points = new List<Transform>();
@@ -21,8 +19,6 @@ public class Patroler : MonoBehaviour
 
     void Start()
     {
-        while(Time.time < 0.5) { }
-        dest = GetComponent<DamageZone>();
         currentPointIndex = Random.Range(0, points.Count);
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -47,6 +43,28 @@ public class Patroler : MonoBehaviour
     {
         if (!Patroler.enemyDie)
         {
+            if (!attack)
+            {
+                if (Vector2.Distance(transform.position, points[currentPointIndex].position) < 1 && Vector2.Distance(transform.position, player.position) > findDistance)
+                {
+                    currentPointIndex = Random.Range(0, points.Count);
+                    idle = true;
+                    jump = false;
+                }
+
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 0.2f);
+                foreach (Collider2D collider in colliders)
+                {
+                    if (collider.CompareTag("wall"))
+                    {
+                        if (Vector2.Distance(transform.position, collider.transform.position) < 2f)
+                        {
+                            transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
+                            return;
+                        }
+                    }
+                }
+            }
 
             if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 1f && Vector2.Distance(transform.position, player.position) < 3f)
             {
@@ -86,11 +104,7 @@ public class Patroler : MonoBehaviour
 
             if (attack == true)
             {
-                dest.setDistractible(playerDestructible);
-            }
-            if(attack == false)
-            {
-                dest.resetDestractible();
+                Attack();
             }
         }
         else
@@ -111,11 +125,19 @@ public class Patroler : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
     }
 
-    IEnumerator Attack()
+    void Attack()
     {
+        if (playerDestructible != null && !playerDestructible.isShielded && Vector2.Distance(transform.position, player.position) < findDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            speed = 3f;
 
-        yield return new WaitForSeconds(1);
-        
+            // Проверяем, есть ли компонент Destructible у игрока, и вызываем ApplyDamage()
+            if (playerDestructible != null)
+            {
+                playerDestructible.ApplyDamage(10); //  наносит урон
+            }
+        }
     }
 
 
