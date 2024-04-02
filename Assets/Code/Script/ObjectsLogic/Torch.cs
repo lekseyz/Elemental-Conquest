@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Torch : Interactable
 {
+    [SerializeField]private WallMove movement;
     public AudioSource torchSound;
     public Animator torchAnimator;
     public Transform soundObject;
@@ -12,8 +13,9 @@ public class Torch : Interactable
     override public void applyFireBall()
     {
         torchAnimator.SetBool("isActive", true);
-        torchSound.pitch = Random.Range(0.8f, 1f);
-        torchSound.Play();
+        //torchSound.pitch = Random.Range(0.8f, 1f);
+        movement.openWall();
+        //torchSound.Play();
     }
     
 
@@ -26,6 +28,7 @@ public class Torch : Interactable
     {
         torchAnimator.SetBool("isActive", false);
         torchSound.Stop();
+        movement.closeWall();
     }
     public override void applyStone()
     {
