@@ -6,7 +6,7 @@ using UnityEngine;
 public class pointIdle : StateMachineBehaviour
 {
     float speed = 3f;
-    float jumpCoolDown = 5;
+    float jumpCoolDown = 0;
     
     Transform player;
     Transform point;
@@ -24,16 +24,17 @@ public class pointIdle : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //jumpCoolDown -= Time.deltaTime;
-        //if(jumpCoolDown <= 0)
-        //{
-        //    jumpCoolDown = 5;
-        //    if (Vector2.Distance(pointRb.position, player.position) > 5)
-        //    {
-        //        animator.SetTrigger("setJump");
-        //    }
-        //}
+        jumpCoolDown -= Time.deltaTime;
+        if (jumpCoolDown <= 0)
+        {
+            jumpCoolDown = 0;
+            if (Vector2.Distance(point.position, player.position) > 1)
+            {
+                animator.SetTrigger("setJump");
+            }
+        }
         Debug.Log(Vector2.Distance(point.position, player.position));
+
         if(Vector2.Distance(point.position, player.position) < 5)
         {
             animator.SetTrigger("setAttack");
@@ -46,7 +47,7 @@ public class pointIdle : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("setAttack");
-        //animator.ResetTrigger("setJump");
+        animator.ResetTrigger("setJump");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

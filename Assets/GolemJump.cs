@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class GolemJump : StateMachineBehaviour
 {
-    float speed = 5;
+    float speed = 0;
     float jumpCoolDown = 5;
 
-    Transform player;
+    Vector2 player;
     Rigidbody2D golemRb;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player = GameObject.FindWithTag("Player").transform;
         golemRb = animator.GetComponent<Rigidbody2D>();
+        player = GameObject.FindWithTag("Player").transform.position - new Vector3(0, 4);
+
+
+        speed = Vector2.Distance(player, golemRb.position) / animator.GetCurrentAnimatorStateInfo(0).length;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        var targer = Vector2.MoveTowards(golemRb.position, player.position, speed * Time.fixedDeltaTime);
+        var targer = Vector2.MoveTowards(golemRb.position, player, speed * Time.fixedDeltaTime);
         golemRb.MovePosition(targer);
     }
 
