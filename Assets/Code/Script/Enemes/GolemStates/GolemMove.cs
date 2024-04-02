@@ -6,7 +6,7 @@ using UnityEngine;
 public class pointIdle : StateMachineBehaviour
 {
     float speed = 3f;
-    float jumpCoolDown = 0;
+    float jumpCoolDown = 3f;
     
     Transform player;
     Transform point;
@@ -27,7 +27,7 @@ public class pointIdle : StateMachineBehaviour
         jumpCoolDown -= Time.deltaTime;
         if (jumpCoolDown <= 0)
         {
-            jumpCoolDown = 0;
+            jumpCoolDown = 3;
             if (Vector2.Distance(point.position, player.position) > 1)
             {
                 animator.SetTrigger("setJump");

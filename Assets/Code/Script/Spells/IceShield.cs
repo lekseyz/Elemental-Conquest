@@ -15,13 +15,13 @@ public class IceShield : BasicSpell
         lastTimeActivation = Time.time;
         Destructible dest = parent.GetComponentInParent<Destructible>();
         dest.isShielded = true;
-        disableShield(dest);
 
-        dest.isShielded = false;
     }
 
     private IEnumerator disableShield(Destructible dest)
     {
         yield return new WaitForSeconds(activeTime);
+
+        dest.isShielded = false;
     }
 }

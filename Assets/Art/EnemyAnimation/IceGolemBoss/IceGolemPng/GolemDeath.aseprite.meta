@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 643ba1713df1c664d887c1a33ea61258
+guid: 6f32010c07340ea49997aa98294876ca
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: IceKnight
+  - name: GolemDeath_Frame_0
     originalName: 
-    pivot: {x: 0.5714286, y: -0.022988506}
+    pivot: {x: 0.48333335, y: -0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 56
-      height: 87
-    spriteID: adb6066550defd34f91771e51b3281a9
+      width: 60
+      height: 56
+    spriteID: 6557dfbb8dbce00488f79c659263c26a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,27 +141,139 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: GolemDeath_Frame_1
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 72
+      y: 4
+      width: 60
+      height: 56
+    spriteID: e2b4887b4b3b09143af25328a515da13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 72, y: 4}
+  - name: GolemDeath_Frame_2
+    originalName: 
+    pivot: {x: 0.4915254, y: -0.018867925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 140
+      y: 4
+      width: 59
+      height: 53
+    spriteID: 7bf562ebbcc701a4d9f22f2bef9f6dd8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 140, y: 4}
+  - name: GolemDeath_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.02173913}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 68
+      width: 58
+      height: 46
+    spriteID: 49b987d391f1b23469eeee57c58c7b8e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 68}
+  - name: GolemDeath_Frame_4
+    originalName: 
+    pivot: {x: 0.453125, y: 0.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 68
+      width: 64
+      height: 40
+    spriteID: 37daaaae308a5714ca84c56e262b2576
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 68}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1675914736
-    name: IceKnight
+    guid: -249741492
+    name: GolemDeath
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: IceKnight
+    - name: GolemDeath_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 2
-        width: 56
-        height: 87
-      spriteId: adb6066550defd34f91771e51b3281a9
+        x: 3
+        y: 4
+        width: 60
+        height: 56
+      spriteId: 6557dfbb8dbce00488f79c659263c26a
+    - name: GolemDeath_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 3
+        y: 4
+        width: 60
+        height: 56
+      spriteId: e2b4887b4b3b09143af25328a515da13
+    - name: GolemDeath_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 3
+        y: 1
+        width: 59
+        height: 53
+      spriteId: 7bf562ebbcc701a4d9f22f2bef9f6dd8
+    - name: GolemDeath_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 3
+        y: 1
+        width: 58
+        height: 46
+      spriteId: 49b987d391f1b23469eeee57c58c7b8e
+    - name: GolemDeath_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 3
+        y: -5
+        width: 64
+        height: 40
+      spriteId: 37daaaae308a5714ca84c56e262b2576
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 90}
+  canvasSize: {x: 64, y: 64}
