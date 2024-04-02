@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 28b77cdb254b3d34880ab5ce3fbaa065
+guid: baa594b02c8532a40ad22252f0ddd126
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,147 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: IceGolemConcept_Frame_0
+  - name: IceGolemWalk_Frame_0
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.07017544}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 70
+      width: 60
+      height: 57
+    spriteID: 607ce3d6b0e629c49955c8e141cae919
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 70}
+  - name: IceGolemWalk_Frame_1
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 391
+      width: 60
+      height: 54
+    spriteID: 60b81b604bc2c6c4ea86cbe63d22882e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 391}
+  - name: IceGolemWalk_Frame_2
+    originalName: 
+    pivot: {x: 0.49180326, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 190
+      width: 61
+      height: 54
+    spriteID: 0c70463129470ff4facda8b6392ea7fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 190}
+  - name: IceGolemWalk_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.0925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 4
+      width: 62
+      height: 54
+    spriteID: d8d351d31e50dba47982cba1327423bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 4}
+  - name: IceGolemWalk_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.0925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 66
+      width: 62
+      height: 54
+    spriteID: 66adda580c3b07f43af2f54219f53c8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 66}
+  - name: IceGolemWalk_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.0925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 128
+      width: 62
+      height: 54
+    spriteID: 4ac1276e40464db4592bcbf9e1b6bf22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 128}
+  - name: IceGolemWalk_Frame_6
+    originalName: 
+    pivot: {x: 0.48333335, y: -0.090909086}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 328
+      width: 60
+      height: 55
+    spriteID: 90252a8e2a2d30645a9e1ee3606ef8ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 328}
+  - name: IceGolemWalk_Frame_7
     originalName: 
     pivot: {x: 0.48333335, y: -0.071428575}
     alignment: 9
@@ -129,10 +269,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 130
+      y: 135
       width: 60
       height: 56
-    spriteID: c35b8ce72a965be4bb0434b994014aef
+    spriteID: 745737f2db4fba641830a0bb8685bff9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,19 +280,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 130}
-  - name: IceGolemConcept_Frame_1
+    uvTransform: {x: 4, y: 135}
+  - name: IceGolemWalk_Frame_8
     originalName: 
-    pivot: {x: 0.48333335, y: -0.071428575}
+    pivot: {x: 0.4754098, y: -0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 72
-      y: 130
-      width: 60
+      y: 4
+      width: 61
       height: 56
-    spriteID: 77cd035908363f54fb0fd79c4d73c77c
+    spriteID: 62f5e8cb7a63da744aef9f11cc7f13f2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,19 +300,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 72, y: 130}
-  - name: IceGolemConcept_Frame_2
+    uvTransform: {x: 72, y: 4}
+  - name: IceGolemWalk_Frame_9
     originalName: 
-    pivot: {x: 0.48387095, y: -0.07272727}
+    pivot: {x: 0.4666667, y: -0.051724136}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 62
-      height: 55
-    spriteID: cc20b1f358fc8804292fd594422ea8ac
+      width: 60
+      height: 58
+    spriteID: fba3f5610b99ef8439ecc844080f3ebd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,118 +321,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: IceGolemConcept_Frame_3
+  - name: IceGolemWalk_Frame_10
     originalName: 
-    pivot: {x: 0.48387095, y: -0.07272727}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 74
-      y: 4
-      width: 62
-      height: 55
-    spriteID: 13e691f42b5592f4e8f7eef809add7fe
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 74, y: 4}
-  - name: IceGolemConcept_Frame_4
-    originalName: 
-    pivot: {x: 0.48387095, y: -0.074074075}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 140
-      y: 130
-      width: 62
-      height: 54
-    spriteID: 01a1961f63eed54469300be008228169
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 140, y: 130}
-  - name: IceGolemConcept_Frame_5
-    originalName: 
-    pivot: {x: 0.48387095, y: -0.074074075}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 74
-      y: 67
-      width: 62
-      height: 54
-    spriteID: 11713ecf2699cc641a3021abe0786adb
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 74, y: 67}
-  - name: IceGolemConcept_Frame_6
-    originalName: 
-    pivot: {x: 0.48387095, y: -0.0754717}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 144
-      y: 194
-      width: 62
-      height: 53
-    spriteID: 78e39bcff8e77e94ebac532c1b9aa072
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 144, y: 194}
-  - name: IceGolemConcept_Frame_7
-    originalName: 
-    pivot: {x: 0.48387095, y: -0.055555556}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 144
-      y: 67
-      width: 62
-      height: 54
-    spriteID: 62a2cedd9d9425a4aa7f03fd78347065
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 144, y: 67}
-  - name: IceGolemConcept_Frame_8
-    originalName: 
-    pivot: {x: 0.48387095, y: -0.074074075}
+    pivot: {x: 0.45762712, y: -0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 194
-      width: 62
-      height: 54
-    spriteID: 7bfc649148d115d499af424282c910d9
+      y: 264
+      width: 59
+      height: 56
+    spriteID: e80082167590f9a45955292fa7aee5d2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -300,59 +340,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 194}
-  - name: IceGolemConcept_Frame_9
+    uvTransform: {x: 4, y: 264}
+  - name: IceGolemWalk_Frame_11
     originalName: 
-    pivot: {x: 0.48387095, y: -0.074074075}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 74
-      y: 194
-      width: 62
-      height: 54
-    spriteID: d3ae73ef538dc734c8dcc7b72d8f74c7
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 74, y: 194}
-  - name: IceGolemConcept_Frame_10
-    originalName: 
-    pivot: {x: 0.48387095, y: -0.07272727}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 144
-      y: 4
-      width: 62
-      height: 55
-    spriteID: e1793d737c9fbea4eb56dfca4a532441
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 144, y: 4}
-  - name: IceGolemConcept_Frame_11
-    originalName: 
-    pivot: {x: 0.48387095, y: -0.07272727}
+    pivot: {x: 0.4827586, y: -0.07017544}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 67
-      width: 62
-      height: 55
-    spriteID: 118b1f6c2fd57614984335a52f8538a8
+      y: 199
+      width: 58
+      height: 57
+    spriteID: e94de920352b740479f0ccdeb8d81996
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -360,112 +360,112 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 67}
+    uvTransform: {x: 4, y: 199}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2056272239
-    name: IceGolemConcept
+    guid: 1872859778
+    name: IceGolemWalk
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: IceGolemConcept_Frame_0
+    - name: IceGolemWalk_Frame_0
       frameIndex: 0
       cellRect:
         x: 3
         y: 4
         width: 60
-        height: 56
-      spriteId: c35b8ce72a965be4bb0434b994014aef
-    - name: IceGolemConcept_Frame_1
+        height: 57
+      spriteId: 607ce3d6b0e629c49955c8e141cae919
+    - name: IceGolemWalk_Frame_1
       frameIndex: 1
+      cellRect:
+        x: 3
+        y: 6
+        width: 60
+        height: 54
+      spriteId: 60b81b604bc2c6c4ea86cbe63d22882e
+    - name: IceGolemWalk_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 2
+        y: 6
+        width: 61
+        height: 54
+      spriteId: 0c70463129470ff4facda8b6392ea7fb
+    - name: IceGolemWalk_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 1
+        y: 5
+        width: 62
+        height: 54
+      spriteId: d8d351d31e50dba47982cba1327423bf
+    - name: IceGolemWalk_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 1
+        y: 5
+        width: 62
+        height: 54
+      spriteId: 66adda580c3b07f43af2f54219f53c8c
+    - name: IceGolemWalk_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 1
+        y: 5
+        width: 62
+        height: 54
+      spriteId: 4ac1276e40464db4592bcbf9e1b6bf22
+    - name: IceGolemWalk_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 3
+        y: 5
+        width: 60
+        height: 55
+      spriteId: 90252a8e2a2d30645a9e1ee3606ef8ef
+    - name: IceGolemWalk_Frame_7
+      frameIndex: 7
       cellRect:
         x: 3
         y: 4
         width: 60
         height: 56
-      spriteId: 77cd035908363f54fb0fd79c4d73c77c
-    - name: IceGolemConcept_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 2
-        y: 4
-        width: 62
-        height: 55
-      spriteId: cc20b1f358fc8804292fd594422ea8ac
-    - name: IceGolemConcept_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 2
-        y: 4
-        width: 62
-        height: 55
-      spriteId: 13e691f42b5592f4e8f7eef809add7fe
-    - name: IceGolemConcept_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 2
-        y: 4
-        width: 62
-        height: 54
-      spriteId: 01a1961f63eed54469300be008228169
-    - name: IceGolemConcept_Frame_5
-      frameIndex: 5
-      cellRect:
-        x: 2
-        y: 4
-        width: 62
-        height: 54
-      spriteId: 11713ecf2699cc641a3021abe0786adb
-    - name: IceGolemConcept_Frame_6
-      frameIndex: 6
-      cellRect:
-        x: 2
-        y: 4
-        width: 62
-        height: 53
-      spriteId: 78e39bcff8e77e94ebac532c1b9aa072
-    - name: IceGolemConcept_Frame_7
-      frameIndex: 7
-      cellRect:
-        x: 2
-        y: 3
-        width: 62
-        height: 54
-      spriteId: 62a2cedd9d9425a4aa7f03fd78347065
-    - name: IceGolemConcept_Frame_8
+      spriteId: 745737f2db4fba641830a0bb8685bff9
+    - name: IceGolemWalk_Frame_8
       frameIndex: 8
       cellRect:
-        x: 2
+        x: 3
         y: 4
-        width: 62
-        height: 54
-      spriteId: 7bfc649148d115d499af424282c910d9
-    - name: IceGolemConcept_Frame_9
+        width: 61
+        height: 56
+      spriteId: 62f5e8cb7a63da744aef9f11cc7f13f2
+    - name: IceGolemWalk_Frame_9
       frameIndex: 9
       cellRect:
-        x: 2
-        y: 4
-        width: 62
-        height: 54
-      spriteId: d3ae73ef538dc734c8dcc7b72d8f74c7
-    - name: IceGolemConcept_Frame_10
+        x: 4
+        y: 3
+        width: 60
+        height: 58
+      spriteId: fba3f5610b99ef8439ecc844080f3ebd
+    - name: IceGolemWalk_Frame_10
       frameIndex: 10
       cellRect:
-        x: 2
+        x: 5
         y: 4
-        width: 62
-        height: 55
-      spriteId: e1793d737c9fbea4eb56dfca4a532441
-    - name: IceGolemConcept_Frame_11
+        width: 59
+        height: 56
+      spriteId: e80082167590f9a45955292fa7aee5d2
+    - name: IceGolemWalk_Frame_11
       frameIndex: 11
       cellRect:
-        x: 2
+        x: 4
         y: 4
-        width: 62
-        height: 55
-      spriteId: 118b1f6c2fd57614984335a52f8538a8
+        width: 58
+        height: 57
+      spriteId: e94de920352b740479f0ccdeb8d81996
     linkedCells: []
     parentIndex: -1
   platformSettings: []

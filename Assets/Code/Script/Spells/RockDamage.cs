@@ -14,8 +14,8 @@ public class RockDamage : MonoBehaviour
 
         if (other.gameObject.tag != "Lava" && other.gameObject.tag != "Player")
         {
-            animator.SetTrigger("Destroy");
-            Destroy(gameObject, animator.GetCurrentAnimatorStateInfo(0).length * 8f);
+            animator.SetBool("Destroy", true);
+            //Destroy(gameObject, 0.4f);
         }
     }
 }
