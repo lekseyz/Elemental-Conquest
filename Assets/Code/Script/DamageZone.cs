@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageZone : MonoBehaviour
 {
     [SerializeField] private int damage;
-    [SerializeField] private float damageRate;
+    [SerializeField] private float damageRate = 1f;
     private Destructible destructible;
     private float timer;
 
