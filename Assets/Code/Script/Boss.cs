@@ -4,9 +4,10 @@ public class Boss : MonoBehaviour
 {
     public float maxHealth = 100f; // Максимальное здоровье босса
     public float currentHealth; // Текущее здоровье босса
-
+    Animator animator;
     void Start()
     {
+        animator = GetComponent<Animator>();  
         currentHealth = maxHealth; // Устанавливаем текущее здоровье равным максимальному при запуске
     }
 
@@ -27,6 +28,7 @@ public class Boss : MonoBehaviour
     {
         // Действия, которые выполняются при смерти босса (например, анимация смерти, удаление объекта и т. д.)
         Debug.Log("Boss уничтожен!");
-        Destroy(gameObject); // Уничтожаем объект босса
+        animator.SetTrigger("Death");
+        Destroy(gameObject, 0.4f); // Уничтожаем объект босса
     }
 }

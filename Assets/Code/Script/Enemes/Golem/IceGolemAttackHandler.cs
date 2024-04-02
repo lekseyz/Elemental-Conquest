@@ -9,7 +9,7 @@ public class IceGolemAttackHandler : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Destructible hui = collision.gameObject.GetComponent<Destructible>();
-            if(hui != null) { hui.ApplyDamage(10); }
+            if(hui != null) { hui.ApplyDamage(25); }
         }
     }
 }
