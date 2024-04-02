@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -30,5 +31,10 @@ public class Boss : MonoBehaviour
         Debug.Log("Boss уничтожен!");
         animator.SetTrigger("Death");
         Destroy(gameObject, 0.4f); // ”ничтожаем объект босса
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.LoadScene("Gameover");
     }
 }
