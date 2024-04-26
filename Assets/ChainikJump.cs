@@ -2,30 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GolemJump : StateMachineBehaviour
+public class ChainikJump : StateMachineBehaviour
 {
-    float speed = 0;
-    float jumpCoolDown = 2f;
 
+    float speed = 6;
     Vector2 player;
-    Rigidbody2D golemRb;
+    Rigidbody2D ChainikRb;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        golemRb = animator.GetComponent<Rigidbody2D>();
-        player = GameObject.FindWithTag("Player").transform.position - new Vector3(0, 4);
+
+        ChainikRb = animator.GetComponent<Rigidbody2D>();
+        player = GameObject.FindWithTag("Player").transform.position;
 
 
-        speed = Vector2.Distance(player, golemRb.position) / animator.GetCurrentAnimatorStateInfo(0).length;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        var targer = Vector2.MoveTowards(golemRb.position, player, speed * Time.fixedDeltaTime);
-        golemRb.MovePosition(targer);
+        var targer = Vector2.MoveTowards(ChainikRb.position, player, speed * Time.fixedDeltaTime);
+        ChainikRb.MovePosition(targer);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
