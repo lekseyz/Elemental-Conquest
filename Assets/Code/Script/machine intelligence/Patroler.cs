@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Patroler : MonoBehaviour
 {
@@ -65,26 +66,27 @@ public class Patroler : MonoBehaviour
                     }
                 }
             }
-
-            if (Vector2.Distance(transform.position, player.position) < findDistance || Vector2.Distance(transform.position, player.position) > 0.5f && Vector2.Distance(transform.position, player.position) < 3f)
-            {
-                angry = true;
-                idle = false;
-                attack = false;
-            }
-
             if (Vector2.Distance(transform.position, player.position) < 0.5f)
             {
                 angry = false;
                 attack = true;
                 jump = false;
             }
-
-            if (Vector2.Distance(transform.position, player.position) > 3f && Vector2.Distance(transform.position, player.position) < 7f)
+            else if (Vector2.Distance(transform.position, player.position) < 3f)
+            {
+                angry = true;
+                idle = false;
+                attack = false;
+            }
+            else if (Vector2.Distance(transform.position, player.position) < 7f)
             {
                 angry = false;
                 attack = false;
                 jump = true;
+            }
+            else
+            {
+                idle = true;
             }
 
             if (angry == true)
@@ -104,7 +106,11 @@ public class Patroler : MonoBehaviour
 
             if (attack == true)
             {
-                Attack();
+                StartCoroutine(Attack());
+            }
+            else
+            {
+                StopCoroutine(Attack());
             }
         }
         else
@@ -125,19 +131,25 @@ public class Patroler : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, points[currentPointIndex].position, speed * Time.deltaTime);
     }
 
-    void Attack()
-    {
-        if (playerDestructible != null && !playerDestructible.isShielded && Vector2.Distance(transform.position, player.position) < findDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            speed = 3f;
+    //void Attack()
+    //{
+    //    if (playerDestructible != null && !playerDestructible.isShielded && Vector2.Distance(transform.position, player.position) < findDistance)
+    //    {
+    //        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+    //        speed = 3f;
 
-            // Проверяем, есть ли компонент Destructible у игрока, и вызываем ApplyDamage()
-            if (playerDestructible != null)
-            {
-                playerDestructible.ApplyDamage(10); //  наносит урон
-            }
-        }
+    //        // Проверяем, есть ли компонент Destructible у игрока, и вызываем ApplyDamage()
+    //        if (playerDestructible != null)
+    //        {
+    //            playerDestructible.ApplyDamage(10); //  наносит урон
+    //        }
+    //    }
+    //}
+
+    IEnumerator Attack()
+    {
+        playerDestructible.ApplyDamage(1);
+        yield return new WaitForSeconds(0.2f);
     }
 
 
