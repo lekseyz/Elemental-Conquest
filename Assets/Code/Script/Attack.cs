@@ -17,7 +17,7 @@ public class Attack : MonoBehaviour
         magics.Add("ff", fb);
         magics.Add("ww", (BasicSpell)ScriptableObject.CreateInstance("Dash"));
         magics.Add("w", (BasicSpell)ScriptableObject.CreateInstance("Wind"));
-        //magics.Add("s", (BasicSpell)ScriptableObject.CreateInstance("IceShield"));
+        magics.Add("s", (BasicSpell)ScriptableObject.CreateInstance("IceShield"));
         magics.Add("ss", rck);
     }
 

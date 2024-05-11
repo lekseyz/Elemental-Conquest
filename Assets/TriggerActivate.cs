@@ -9,22 +9,33 @@ public class TriggerActivate : MonoBehaviour
     [SerializeField] private GameObject bossBar;
     [SerializeField] private WallMove movement;
     [SerializeField] private GameObject boss;
+    [SerializeField] private MusicManager musicManager; // Добавляем ссылку на MusicManager
+
+    private bool triggered = false;
 
     void Start()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !triggered)
         {
+            triggered = true;
+            musicManager.SwitchToBossMusic();
             movement.closeWall();
-            //torch.SetActive(false);
-            boss.SetActive(true);
-            bossText.SetActive(true);
-            bossBar.SetActive(true);
-            gameObject.SetActive(false);
+            StartCoroutine(ActivateAfterDelay());
         }
+    }
+
+    IEnumerator ActivateAfterDelay()
+    {
+        yield return new WaitForSeconds(6f);
+        //torch.SetActive(false);
+        boss.SetActive(true);
+        bossText.SetActive(true);
+        bossBar.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

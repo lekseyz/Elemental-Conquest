@@ -1,11 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class IceShield : BasicSpell
 {
     float lastTimeActivation = -1f;
-    float activeTime = 1f;
+    float activeTime = 5f;
     float cooldownTime = 1.5f;
 
     public override void activate(GameObject parent, Vector3 dir, float angle)
@@ -15,13 +17,12 @@ public class IceShield : BasicSpell
         lastTimeActivation = Time.time;
         Destructible dest = parent.GetComponentInParent<Destructible>();
         dest.isShielded = true;
-
+        disable(dest);
     }
 
-    private IEnumerator disableShield(Destructible dest)
+    private async Task disable(Destructible dest)
     {
-        yield return new WaitForSeconds(activeTime);
-
-        dest.isShielded = false;
+        await Task.Delay(TimeSpan.FromSeconds(activeTime));
+        dest.isShielded = false;        
     }
 }

@@ -51056,6 +51056,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChainikjEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 493276830418902151, guid: 4b388aa5d8359f345971ea055feebcda,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7306500878711977541, guid: 4b388aa5d8359f345971ea055feebcda,
         type: 3}
       propertyPath: m_LocalPosition.x
