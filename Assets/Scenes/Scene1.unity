@@ -13550,7 +13550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790e19bc02c189745a0386f8e1f778c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 622998759}
   musicSource1: {fileID: 2132557549}
   musicSource2: {fileID: 2117251194}
   musicSource3: {fileID: 1470058808}
@@ -45902,6 +45901,7 @@ MonoBehaviour:
   bossBar: {fileID: 2130077202}
   movement: {fileID: 306412107}
   boss: {fileID: 622998759}
+  musicManager: {fileID: 409603983}
 --- !u!61 &1064210265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45956,7 +45956,7 @@ Transform:
   m_GameObject: {fileID: 1064210263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.44, y: -9.04, z: 0.15782997}
+  m_LocalPosition: {x: 31.79, y: -9.04, z: 0.15782997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47134,19 +47134,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1379337201}
-  player: {fileID: 0}
+  player: {fileID: 1957603731}
   speed: 5
   attackDistance: 0.8
   detectionDistance: 10
-  points:
-  - {fileID: 1791491368}
-  - {fileID: 607484094}
-  - {fileID: 686112533}
-  - {fileID: 1282486400}
-  - {fileID: 1192306098}
-  currentPointIndex: 0
-  isJumping: 0
-  enemyDie: 0
+  isDead: 0
 --- !u!61 &1379337205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47570,7 +47562,7 @@ Transform:
   m_GameObject: {fileID: 1470058808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -36.199997, y: -39.799995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48423,7 +48415,7 @@ Transform:
   m_GameObject: {fileID: 1804154445}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.1162, y: -6.427, z: 0}
+  m_LocalPosition: {x: 26.8, y: -6.427, z: 0}
   m_LocalScale: {x: 2.9251, y: 2.8182, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48506,7 +48498,7 @@ PrefabInstance:
     - target: {fileID: 4385789642200563767, guid: 34f87d1998159344894c8e648b9e03f4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.1
+      value: 30.783798
       objectReference: {fileID: 0}
     - target: {fileID: 4385789642200563767, guid: 34f87d1998159344894c8e648b9e03f4,
         type: 3}
@@ -48740,7 +48732,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 4.8216095
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -48825,7 +48817,7 @@ Transform:
   m_GameObject: {fileID: 2117251194}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -36.199997, y: -39.799995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48950,7 +48942,7 @@ Transform:
   m_GameObject: {fileID: 2132557549}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.6, y: -16.3, z: 0}
+  m_LocalPosition: {x: -32.3, y: -40.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

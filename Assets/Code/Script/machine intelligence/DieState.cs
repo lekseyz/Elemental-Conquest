@@ -7,7 +7,7 @@ public class DieState : StateMachineBehaviour
         Patroler patroler = animator.GetComponent<Patroler>();
         if (patroler != null)
         {
-            patroler.Die();
+            patroler.Die(); // Вызов метода Die при входе в состояние смерти
         }
     }
 }

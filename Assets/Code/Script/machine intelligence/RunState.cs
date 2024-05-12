@@ -7,7 +7,7 @@ public class RunState : StateMachineBehaviour
         Patroler patroler = animator.GetComponent<Patroler>();
         if (patroler != null)
         {
-            patroler.speed = 3; // ”становка скорости дл€ бега
+            patroler.speed = 5; // ”становка скорости дл€ бега
         }
     }
 
@@ -18,23 +18,12 @@ public class RunState : StateMachineBehaviour
         {
             if (patroler.PlayerInRange())
             {
-                patroler.MoveTowardsPlayer();  // »дти к игроку, если он в пределах детекции
+                patroler.MoveTowardsPlayer(); // ƒвижение к игроку
             }
             else
             {
-                patroler.MoveToNextPoint();  // »наче двигатьс€ к следующей точке
-            }
-
-            // ѕроверка, достиг ли моб точки и находитс€ ли игрок вне зоны обнаружени€
-            if (!patroler.PlayerInRange() && patroler.HasReachedCurrentPoint() && patroler.CurrentPointIndex != 0)
-            {
-                animator.SetBool("Idle", true);  // ≈сли точка достигнута и игрок далеко, переход в Idle
-            }
-            else
-            {
-                animator.SetBool("Idle", false);  // ≈сли не встретил игрока и не достигнута перва€ точка, продолжать движение
+                animator.SetTrigger("Idle"); // ѕереход в состо€ние поко€, если игрок вне зоны видимости
             }
         }
     }
-
 }

@@ -32,7 +32,7 @@ public class BlueSlime : Interactable
         {
             if (patroler != null)
             {
-                patroler.SetEnemyDie(true);  // Устанавливаем флаг смерти через метод
+                patroler.SetEnemyDie();  // Устанавливаем флаг смерти через метод
             }
             animator.SetBool("Die", true);
             if (!isTimerRunning)
