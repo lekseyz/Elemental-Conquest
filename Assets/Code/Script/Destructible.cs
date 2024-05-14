@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+
 public class Destructible : MonoBehaviour
 {
     [SerializeField] private int maxHitPoints;
@@ -11,13 +12,14 @@ public class Destructible : MonoBehaviour
     public bool isShielded;
     private float timer;
     private float maxTimer = 1f;
+
     private void Start()
     {
         isTakeDamage = false;
         hitPoints = maxHitPoints;
         ChangeHP.Invoke();
     }
-   
+
     public void ApplyDamage(int damage)
     {
         if (!isShielded)
@@ -35,7 +37,6 @@ public class Destructible : MonoBehaviour
 
     private void Update()
     {
-
         if (isTakeDamage == true)
         {
             timer += Time.deltaTime;
@@ -47,7 +48,6 @@ public class Destructible : MonoBehaviour
             image.SetActive(false);
             timer = 0;
         }
-
     }
 
     public void Kill()
@@ -62,6 +62,7 @@ public class Destructible : MonoBehaviour
     {
         return hitPoints;
     }
+
     public int GetMaxHitPoints()
     {
         return maxHitPoints;

@@ -7,7 +7,7 @@ public class AngryState : StateMachineBehaviour
         Patroler patroler = animator.GetComponent<Patroler>();
         if (patroler != null)
         {
-            patroler.MoveTowardsPlayer();  // Обеспечение доступа к методу
+            patroler.MoveTowardsPlayer(); // Обеспечение доступа к методу
         }
     }
 }
