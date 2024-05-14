@@ -5,16 +5,11 @@ using UnityEngine;
 public class BlueSlime : Interactable
 {
     [SerializeField] SliderController controller;
-    private float timerDuration = 1.5f;
-    private bool isTimerRunning;
     public Animator animator;
-    private Patroler patroler;  // Ссылка на Patroler
 
     private void Start()
     {
         controller = GetComponentInChildren<SliderController>();
-        isTimerRunning = false;
-        patroler = FindObjectOfType<Patroler>();  // Находим компонент Patroler на сцене
     }
 
     float HP = 100;
@@ -30,13 +25,7 @@ public class BlueSlime : Interactable
     {
         if (currentHP <= 0)
         {
-            if (patroler != null)
-            {
-                patroler.SetEnemyDie();  // Устанавливаем флаг смерти через метод
-            }
-            animator.SetBool("Die", true);
-            if (!isTimerRunning)
-                StartCoroutine(DisappearTimer());
+            animator.SetTrigger("Die");
         }
     }
 
@@ -57,12 +46,5 @@ public class BlueSlime : Interactable
     {
         currentHP -= 50;
         controller.UpdateSliderVal(currentHP, HP);
-    }
-
-    IEnumerator DisappearTimer()
-    {
-        isTimerRunning = true;
-        yield return new WaitForSeconds(timerDuration);
-        Destroy(gameObject);
     }
 }

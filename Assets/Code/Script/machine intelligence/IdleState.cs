@@ -8,40 +8,32 @@ public class IdleState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Patroler patroler = animator.GetComponent<Patroler>();
-        if (patroler != null)
+        if (patroler == null)
         {
-            patroler.speed = 1; // Медленное движение в состоянии покоя
+            throw new System.Exception("Patroler cannot be null");
         }
-        startTime = Time.time; // Запоминаем время входа в состояние
+        
+        patroler.setSpeed(Patroler.SpeedStates.Idle);
+        patroler.setRandPointTarget();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Patroler patroler = animator.GetComponent<Patroler>();
-        if (patroler != null)
+        if (patroler == null)
         {
-            float distance = Vector3.Distance(patroler.transform.position, patroler.player.position);
-
-            if (Time.time - startTime < idleTime) return; // Ждем, пока не пройдет минимальное время
-
-            if (distance > patroler.detectionDistance)
-            {
-                patroler.MoveToNextPoint(); // Продолжение движения по точкам
-            }
-            else if (distance <= patroler.detectionDistance && distance > patroler.attackDistance)
-            {
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
-                {
-                    animator.SetTrigger("Jump"); // Переход в состояние прыжка
-                }
-            }
-            else if (distance <= patroler.attackDistance)
-            {
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-                {
-                    animator.SetTrigger("Attack"); // Переход в состояние атаки
-                }
-            }
+            throw new System.Exception("Patroler cannot be null");
         }
+
+        float distanceTarget = patroler.toTargetDistance;
+        float distancePlayer = patroler.toPlayerDistance;
+
+        if(distancePlayer < patroler.detectionDistance) { animator.SetTrigger("Run"); }
+        if (distanceTarget < 1) { patroler.setRandPointTarget(); }
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.ResetTrigger("Idle");
     }
 }

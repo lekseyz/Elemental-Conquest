@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class DieState : StateMachineBehaviour
 {
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Patroler patroler = animator.GetComponent<Patroler>();
-        if (patroler != null)
-        {
-            patroler.Die(); // Вызов метода Die при входе в состояние смерти
-        }
+        if (patroler == null) throw new System.Exception();
+
+        patroler.setSpeed(Patroler.SpeedStates.Stay);
+    }
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        Destroy(animator.gameObject);
     }
 }

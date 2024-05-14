@@ -11,19 +11,14 @@ public class DamageZone : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= damageRate && destructible != null)
-        {
-            destructible.ApplyDamage(damage);
-            timer = 0;
-        }
+       
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            destructible = other.GetComponent<Destructible>();
+            other.gameObject.GetComponent<Destructible>().ApplyDamage(damage);
         }
     }
 
