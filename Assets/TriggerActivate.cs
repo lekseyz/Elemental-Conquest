@@ -25,17 +25,10 @@ public class TriggerActivate : MonoBehaviour
             triggered = true;
             musicManager.SwitchToBossMusic();
             movement.closeWall();
-            StartCoroutine(ActivateAfterDelay());
+            boss.SetActive(true);
+            bossText.SetActive(true);
+            bossBar.SetActive(true);
+            gameObject.SetActive(false);
         }
-    }
-
-    IEnumerator ActivateAfterDelay()
-    {
-        yield return new WaitForSeconds(6f);
-        //torch.SetActive(false);
-        boss.SetActive(true);
-        bossText.SetActive(true);
-        bossBar.SetActive(true);
-        gameObject.SetActive(false);
     }
 }

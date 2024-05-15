@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 public class IceShield : BasicSpell
 {
     float lastTimeActivation = -1f;
-    float activeTime = 5f;
+    float activeTime = 1f;
     float cooldownTime = 1.5f;
 
     public override void activate(GameObject parent, Vector3 dir, float angle)

@@ -29,7 +29,7 @@ public class IdleState : StateMachineBehaviour
         float distancePlayer = patroler.toPlayerDistance;
 
         if(distancePlayer < patroler.detectionDistance) { animator.SetTrigger("Run"); }
-        if (distanceTarget < 1) { patroler.setRandPointTarget(); }
+        if (distanceTarget < 2) { patroler.setRandPointTarget(); }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
