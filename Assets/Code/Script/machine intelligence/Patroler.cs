@@ -6,6 +6,7 @@ using UnityEditor;
 public class Patroler : MonoBehaviour
 {
     public enum SpeedStates
+
     {
         Run, 
         Idle,
