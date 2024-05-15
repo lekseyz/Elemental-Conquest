@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Destructible : MonoBehaviour
 {
@@ -55,7 +56,7 @@ public class Destructible : MonoBehaviour
         hitPoints = 0;
         maxHitPoints = 0;
         ChangeHP.Invoke();
-        Die.Invoke();
+        SceneManager.LoadScene("GameOver");
     }
 
     public int GetHitPoints()

@@ -9,7 +9,13 @@ public class Exit : MonoBehaviour
     {
         Application.Quit();
     }
-    public void RespawnGame()//респавн
+
+    public void RespawnGame() //респавн
+    {
+        SceneManager.LoadScene("Scene1"); //SceneManager.GetActiveScene().buildIndex - последняя сцена(загружает саму меню, а не игру). Не придумал как через это, если будет несколько миров
+    }
+
+    public void GoToMenu()
     {
         SceneManager.LoadScene("menu");
     }
