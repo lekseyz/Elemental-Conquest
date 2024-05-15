@@ -18,7 +18,7 @@ public class Boss : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die(); 
+            Die();
         }
 
     }
@@ -27,10 +27,11 @@ public class Boss : MonoBehaviour
     {
         animator.SetTrigger("Death");
         Destroy(gameObject, 0.4f); // ”ничтожаем объект босса
+        SceneManager.LoadScene("WinMenu");
     }
 
     private void OnDestroy()
     {
-        SceneManager.LoadScene("Gameover");
+        SceneManager.LoadScene("GameOver");
     }
 }
