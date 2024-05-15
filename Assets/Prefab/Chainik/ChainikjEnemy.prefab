@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6787860005887421149}
   - component: {fileID: 417263649523955202}
   - component: {fileID: 2608717521704689016}
+  - component: {fileID: 301688787713806394}
   m_Layer: 0
   m_Name: ChainikjEnemy
   m_TagString: Interactable
@@ -217,3 +218,38 @@ PolygonCollider2D:
       - {x: 0.09018219, y: 0.4883632}
       - {x: 0.07, y: 0.51}
   m_UseDelaunayMesh: 0
+--- !u!58 &301688787713806394
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493276830418902151}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.01, y: 0.08}
+  serializedVersion: 2
+  m_Radius: 0.42734247

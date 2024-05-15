@@ -27,5 +27,5 @@
 
 
 ## 💻Используемые ресурсы:
-[Тайлмапa](https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605),  
+[Тайлмапa](https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605), https://pixeljad.itch.io/wintervillage?download  
 [Aнимация слайма](https://craftpix.net/freebies/free-slime-sprite-sheets-pixel-art/)
