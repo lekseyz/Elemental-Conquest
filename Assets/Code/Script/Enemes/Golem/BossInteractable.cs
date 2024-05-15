@@ -17,7 +17,7 @@ public class BossInteractable : Interactable
 
     public override void applyStone()
     {
-        boss.TakeDamage(5);
+        boss.TakeDamage(25);
     }
 
     public override void applyWind(Vector2 dir)

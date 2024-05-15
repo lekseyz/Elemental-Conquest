@@ -35,7 +35,7 @@ public class pointIdle : StateMachineBehaviour
         }
         Debug.Log(Vector2.Distance(point.position, player.position));
 
-        if(Vector2.Distance(point.position, player.position) < 5)
+        if(Vector2.Distance(point.position, player.position) < 4)
         {
             animator.SetTrigger("setAttack");
         }
