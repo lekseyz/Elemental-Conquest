@@ -1212,9 +1212,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 474928199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f867af6112a238d41be544e7cede1289, type: 3}
+  m_Script: {fileID: 11500000, guid: 2839d64c547a6d9499ec6b3ad29141b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myMixer: {fileID: 24100000, guid: 9dbf7655d68ef3b46b084f074e58d560, type: 2}
+  musicSlider: {fileID: 200007162}
 --- !u!1 &511816232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,7 +2900,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 421161859}
+      - m_Target: {fileID: 1642350388}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: SaveSettings
         m_Mode: 1
@@ -3375,7 +3377,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 421161859}
+      - m_Target: {fileID: 1642350388}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: SetFullscreen
         m_Mode: 0
@@ -3399,6 +3401,7 @@ GameObject:
   - component: {fileID: 1642350385}
   - component: {fileID: 1642350387}
   - component: {fileID: 1642350386}
+  - component: {fileID: 1642350388}
   m_Layer: 5
   m_Name: settingsPanel
   m_TagString: Untagged
@@ -3467,6 +3470,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642350384}
   m_CullTransparentMesh: 1
+--- !u!114 &1642350388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642350384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfdb836a1cbd2945b3b9f49cd0e01a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionDropdown: {fileID: 1737347794}
 --- !u!1 &1737347792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,7 +3583,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 421161859}
+      - m_Target: {fileID: 1642350388}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: SetResolution
         m_Mode: 0
