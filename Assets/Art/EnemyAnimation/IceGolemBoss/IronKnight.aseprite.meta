@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30f55bfdbf4282e4b911cc2a7ed42b28
+guid: bfbf49f01e132dd4f81173a88b66f1b5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,58 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: IceSpike_Frame_0
+  - name: IronKnight
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 92
-      y: 36
-      width: 10
-      height: 16
-    spriteID: aa24c54f5bd554f4788ca7e7303b57d2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 92, y: 36}
-  - name: IceSpike_Frame_1
-    originalName: 
-    pivot: {x: 0.4375, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 92
-      y: 4
-      width: 16
-      height: 24
-    spriteID: 213adbae00083744dbf76121873458b0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 92, y: 4}
-  - name: IceSpike_Frame_2
-    originalName: 
-    pivot: {x: 0.44444445, y: 0.23076925}
+    pivot: {x: 0.5714286, y: -0.022988506}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 36
-      height: 52
-    spriteID: c379f5e074819854db220beaa9477387
+      width: 56
+      height: 87
+    spriteID: bb2ba114ab99af84ea30738cf61a3a0a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,99 +141,27 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: IceSpike_Frame_3
-    originalName: 
-    pivot: {x: 0.47222224, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 48
-      y: 4
-      width: 36
-      height: 52
-    spriteID: 689688fce22a8504e985edd3ce196edf
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 48, y: 4}
-  - name: IceSpike_Frame_4
-    originalName: 
-    pivot: {x: 0.41666666, y: -0.03846154}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 64
-      width: 36
-      height: 52
-    spriteID: 5325e6b2d140e0e43a1d240662a30241
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 64}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -83899773
-    name: IceSpike
+    guid: -1363535655
+    name: IronKnight
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: IceSpike_Frame_0
+    - name: IronKnight
       frameIndex: 0
       cellRect:
-        x: 27
-        y: 0
-        width: 10
-        height: 16
-      spriteId: aa24c54f5bd554f4788ca7e7303b57d2
-    - name: IceSpike_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 25
-        y: 0
-        width: 16
-        height: 24
-      spriteId: 213adbae00083744dbf76121873458b0
-    - name: IceSpike_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 16
-        y: -12
-        width: 36
-        height: 52
-      spriteId: c379f5e074819854db220beaa9477387
-    - name: IceSpike_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 15
-        y: 0
-        width: 36
-        height: 52
-      spriteId: 689688fce22a8504e985edd3ce196edf
-    - name: IceSpike_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 17
+        x: 0
         y: 2
-        width: 36
-        height: 52
-      spriteId: 5325e6b2d140e0e43a1d240662a30241
+        width: 56
+        height: 87
+      spriteId: bb2ba114ab99af84ea30738cf61a3a0a
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
+  canvasSize: {x: 64, y: 90}

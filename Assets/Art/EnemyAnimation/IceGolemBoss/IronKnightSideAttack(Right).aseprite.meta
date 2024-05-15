@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56bf9a2b7cd2aac4bb4ff174f3b6588d
+guid: 3a9843193a840da43801931fba657cfd
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: IceKnightSideAttack_Frame_0
+  - name: IronKnightSideAttack(Right)_Frame_0
     originalName: 
     pivot: {x: 0.65333337, y: -0.27906978}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 207
       width: 75
       height: 86
-    spriteID: 283b3f8aa27681d47ad016af8f2e7026
+    spriteID: 69c432fb24669c043a9577288f8810fd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -141,7 +141,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 85, y: 207}
-  - name: IceKnightSideAttack_Frame_1
+  - name: IronKnightSideAttack(Right)_Frame_1
     originalName: 
     pivot: {x: 0.6781609, y: -0.28235295}
     alignment: 9
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 114
       width: 87
       height: 85
-    spriteID: 5e438e53639821e44b1f5bc49c456ea9
+    spriteID: 1f963faf91bfeab4f994987832c2b91f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -161,7 +161,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 85, y: 114}
-  - name: IceKnightSideAttack_Frame_2
+  - name: IronKnightSideAttack(Right)_Frame_2
     originalName: 
     pivot: {x: 0.6363636, y: -0.15957446}
     alignment: 9
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 4
       width: 77
       height: 94
-    spriteID: 65fab646fbac94e4397a141d37928db9
+    spriteID: c5aacfd310cf5074b9ee7fb5333585ad
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -181,7 +181,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 168, y: 4}
-  - name: IceKnightSideAttack_Frame_3
+  - name: IronKnightSideAttack(Right)_Frame_3
     originalName: 
     pivot: {x: 0.6164383, y: -0.028301887}
     alignment: 9
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 4
       width: 73
       height: 106
-    spriteID: 631121fa99282ea4db60f2bbb6db9e66
+    spriteID: f9940c9d336cfb445a6544ba9e5a3f12
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -201,7 +201,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: IceKnightSideAttack_Frame_4
+  - name: IronKnightSideAttack(Right)_Frame_4
     originalName: 
     pivot: {x: 0.6, y: -0.009259259}
     alignment: 9
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 118
       width: 70
       height: 108
-    spriteID: 3d6c1134176defb4aafba3763e9079b7
+    spriteID: d4724ad41aa596141beb6b2e11ef1583
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -221,7 +221,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 118}
-  - name: IceKnightSideAttack_Frame_5
+  - name: IronKnightSideAttack(Right)_Frame_5
     originalName: 
     pivot: {x: 0.5692308, y: -0.018691588}
     alignment: 9
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 234
       width: 65
       height: 107
-    spriteID: 2fe1d94aa31436b46a973d870ef31f27
+    spriteID: a58a7d923fa5e7c439d3956369b82b66
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -241,7 +241,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 234}
-  - name: IceKnightSideAttack_Frame_6
+  - name: IronKnightSideAttack(Right)_Frame_6
     originalName: 
     pivot: {x: 0.41333336, y: -0.078431375}
     alignment: 9
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 4
       width: 75
       height: 102
-    spriteID: 283eaef064654e441a5528bec72f239f
+    spriteID: f9266c42b4d0cf445b6dca25c67f66e6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -261,7 +261,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 85, y: 4}
-  - name: IceKnightSideAttack_Frame_7
+  - name: IronKnightSideAttack(Right)_Frame_7
     originalName: 
     pivot: {x: 0.07462686, y: -0.08910891}
     alignment: 9
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 349
       width: 67
       height: 101
-    spriteID: 95966cc5248db704a97270c3879393fb
+    spriteID: 7590b6353743ace48a5e4446d052d541
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -281,7 +281,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 349}
-  - name: IceKnightSideAttack_Frame_8
+  - name: IronKnightSideAttack(Right)_Frame_8
     originalName: 
     pivot: {x: 0.07575758, y: -0.27272728}
     alignment: 9
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 403
       width: 66
       height: 88
-    spriteID: 6091f22f4b7795143877ca3921fa7089
+    spriteID: f7c5d2f6d3820c145a35c679602d5a6d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -301,7 +301,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 85, y: 403}
-  - name: IceKnightSideAttack_Frame_9
+  - name: IronKnightSideAttack(Right)_Frame_9
     originalName: 
     pivot: {x: 0.16666667, y: -0.24242425}
     alignment: 9
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 409
       width: 36
       height: 99
-    spriteID: 46b40c99ff9b1294abbb8a58809bbea7
+    spriteID: 1a1128535a4de8f4f8d9770623c809bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -321,7 +321,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 168, y: 409}
-  - name: IceKnightSideAttack_Frame_10
+  - name: IronKnightSideAttack(Right)_Frame_10
     originalName: 
     pivot: {x: 0.44, y: -0.24}
     alignment: 9
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 301
       width: 50
       height: 100
-    spriteID: a9acf0b36106a494f8de21191a0d5fd1
+    spriteID: f4c0142999996704a8a0ec7b9697bbfc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -341,7 +341,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 168, y: 301}
-  - name: IceKnightSideAttack_Frame_11
+  - name: IronKnightSideAttack(Right)_Frame_11
     originalName: 
     pivot: {x: 0.03125, y: -0.25531915}
     alignment: 9
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 301
       width: 64
       height: 94
-    spriteID: 9bdb6fb43895cd34883954379a873564
+    spriteID: 031f9852538e40b4aa811a6fd465a576
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -361,7 +361,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 85, y: 301}
-  - name: IceKnightSideAttack_Frame_12
+  - name: IronKnightSideAttack(Right)_Frame_12
     originalName: 
     pivot: {x: 0.030303031, y: -0.26190478}
     alignment: 9
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 114
       width: 66
       height: 84
-    spriteID: db92dd3bc02cf36408fee62ae686272a
+    spriteID: ef49865ad7b62e0488b58c2ed6d99496
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -381,7 +381,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 180, y: 114}
-  - name: IceKnightSideAttack_Frame_13
+  - name: IronKnightSideAttack(Right)_Frame_13
     originalName: 
     pivot: {x: 0.030303031, y: -0.23255813}
     alignment: 9
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 207
       width: 66
       height: 86
-    spriteID: e61c046cc8a11ea4999db7e651038c99
+    spriteID: ef0936d7f1e51e349b03917e23dc9f43
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -404,124 +404,124 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -334209349
-    name: IceKnightSideAttack
+    guid: 1310984383
+    name: IronKnightSideAttack(Right)
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: IceKnightSideAttack_Frame_0
+    - name: IronKnightSideAttack(Right)_Frame_0
       frameIndex: 0
       cellRect:
         x: 15
         y: 24
         width: 75
         height: 86
-      spriteId: 283b3f8aa27681d47ad016af8f2e7026
-    - name: IceKnightSideAttack_Frame_1
+      spriteId: 69c432fb24669c043a9577288f8810fd
+    - name: IronKnightSideAttack(Right)_Frame_1
       frameIndex: 1
       cellRect:
         x: 5
         y: 24
         width: 87
         height: 85
-      spriteId: 5e438e53639821e44b1f5bc49c456ea9
-    - name: IceKnightSideAttack_Frame_2
+      spriteId: 1f963faf91bfeab4f994987832c2b91f
+    - name: IronKnightSideAttack(Right)_Frame_2
       frameIndex: 2
       cellRect:
         x: 15
         y: 15
         width: 77
         height: 94
-      spriteId: 65fab646fbac94e4397a141d37928db9
-    - name: IceKnightSideAttack_Frame_3
+      spriteId: c5aacfd310cf5074b9ee7fb5333585ad
+    - name: IronKnightSideAttack(Right)_Frame_3
       frameIndex: 3
       cellRect:
         x: 19
         y: 3
         width: 73
         height: 106
-      spriteId: 631121fa99282ea4db60f2bbb6db9e66
-    - name: IceKnightSideAttack_Frame_4
+      spriteId: f9940c9d336cfb445a6544ba9e5a3f12
+    - name: IronKnightSideAttack(Right)_Frame_4
       frameIndex: 4
       cellRect:
         x: 22
         y: 1
         width: 70
         height: 108
-      spriteId: 3d6c1134176defb4aafba3763e9079b7
-    - name: IceKnightSideAttack_Frame_5
+      spriteId: d4724ad41aa596141beb6b2e11ef1583
+    - name: IronKnightSideAttack(Right)_Frame_5
       frameIndex: 5
       cellRect:
         x: 27
         y: 2
         width: 65
         height: 107
-      spriteId: 2fe1d94aa31436b46a973d870ef31f27
-    - name: IceKnightSideAttack_Frame_6
+      spriteId: a58a7d923fa5e7c439d3956369b82b66
+    - name: IronKnightSideAttack(Right)_Frame_6
       frameIndex: 6
       cellRect:
         x: 33
         y: 8
         width: 75
         height: 102
-      spriteId: 283eaef064654e441a5528bec72f239f
-    - name: IceKnightSideAttack_Frame_7
+      spriteId: f9266c42b4d0cf445b6dca25c67f66e6
+    - name: IronKnightSideAttack(Right)_Frame_7
       frameIndex: 7
       cellRect:
         x: 59
         y: 9
         width: 67
         height: 101
-      spriteId: 95966cc5248db704a97270c3879393fb
-    - name: IceKnightSideAttack_Frame_8
+      spriteId: 7590b6353743ace48a5e4446d052d541
+    - name: IronKnightSideAttack(Right)_Frame_8
       frameIndex: 8
       cellRect:
         x: 59
         y: 24
         width: 66
         height: 88
-      spriteId: 6091f22f4b7795143877ca3921fa7089
-    - name: IceKnightSideAttack_Frame_9
+      spriteId: f7c5d2f6d3820c145a35c679602d5a6d
+    - name: IronKnightSideAttack(Right)_Frame_9
       frameIndex: 9
       cellRect:
         x: 58
         y: 24
         width: 36
         height: 99
-      spriteId: 46b40c99ff9b1294abbb8a58809bbea7
-    - name: IceKnightSideAttack_Frame_10
+      spriteId: 1a1128535a4de8f4f8d9770623c809bc
+    - name: IronKnightSideAttack(Right)_Frame_10
       frameIndex: 10
       cellRect:
         x: 42
         y: 24
         width: 50
         height: 100
-      spriteId: a9acf0b36106a494f8de21191a0d5fd1
-    - name: IceKnightSideAttack_Frame_11
+      spriteId: f4c0142999996704a8a0ec7b9697bbfc
+    - name: IronKnightSideAttack(Right)_Frame_11
       frameIndex: 11
       cellRect:
         x: 62
         y: 24
         width: 64
         height: 94
-      spriteId: 9bdb6fb43895cd34883954379a873564
-    - name: IceKnightSideAttack_Frame_12
+      spriteId: 031f9852538e40b4aa811a6fd465a576
+    - name: IronKnightSideAttack(Right)_Frame_12
       frameIndex: 12
       cellRect:
         x: 62
         y: 22
         width: 66
         height: 84
-      spriteId: db92dd3bc02cf36408fee62ae686272a
-    - name: IceKnightSideAttack_Frame_13
+      spriteId: ef49865ad7b62e0488b58c2ed6d99496
+    - name: IronKnightSideAttack(Right)_Frame_13
       frameIndex: 13
       cellRect:
         x: 62
         y: 20
         width: 66
         height: 86
-      spriteId: e61c046cc8a11ea4999db7e651038c99
+      spriteId: ef0936d7f1e51e349b03917e23dc9f43
     linkedCells: []
     parentIndex: -1
   platformSettings: []
