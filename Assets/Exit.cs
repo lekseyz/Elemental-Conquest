@@ -8,4 +8,8 @@ public class Exit : MonoBehaviour
     {
         Application.Quit();
     }
+    public void RespawnGame()//респавн
+    {
+        SceneManager.LoadScene("menu");
+    }
 }
