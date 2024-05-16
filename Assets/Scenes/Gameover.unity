@@ -559,7 +559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: Menu
 --- !u!222 &961648302
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -721,7 +721,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1826582277}
         m_TargetAssemblyTypeName: Exit, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
