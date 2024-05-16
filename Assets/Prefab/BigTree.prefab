@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5588618529065023950}
   - component: {fileID: 8086812270187747579}
-  - component: {fileID: 3306379025123813620}
+  - component: {fileID: 8557959452391582212}
+  - component: {fileID: 1434689457714138612}
   m_Layer: 0
   m_Name: BigTree
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2020518459, guid: 96ce10cf9ba60a64e8d91371aea3fef5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,9 +85,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!68 &3306379025123813620
-EdgeCollider2D:
+  m_SpriteSortPoint: 1
+--- !u!210 &8557959452391582212
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331567078740018900}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_SortAtRoot: 0
+--- !u!70 &1434689457714138612
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,19 +130,6 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.024462268, y: -0.11657365}
-  - {x: -0.20320575, y: -0.12566319}
-  - {x: -0.29069626, y: -0.24029407}
-  - {x: -0.21338357, y: -0.33167264}
-  - {x: -0.011645136, y: -0.32852578}
-  - {x: 0.19668318, y: -0.30598432}
-  - {x: 0.24780697, y: -0.24757792}
-  - {x: 0.16578406, y: -0.13567021}
-  - {x: -0.023844052, y: -0.116573706}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+  m_Offset: {x: 0, y: -0.07}
+  m_Size: {x: 0.55, y: 0.2}
+  m_Direction: 1
