@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KnightAttack : StateMachineBehaviour
@@ -8,8 +9,6 @@ public class KnightAttack : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetFloat("RandomAttack", Random.Range(0, 1.0f));
-
         patroler = animator.GetComponent<PatrolerKnight>();
         patroler.speed = 0;
     }
