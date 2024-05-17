@@ -14,6 +14,14 @@ public class PatrolerKnight : MonoBehaviour
     [SerializeField] private int _maxHealth = 1000;
     [SerializeField] private int _speed = 0;
 
+    private float _chainikCooldown = 5f;
+    private bool _canSpawn = true;
+
+    public bool canSpawn
+    {
+        get => _canSpawn;
+    }
+
     private int _chainicsCount = 0;
 
     [SerializeField] private List<GameObject> _points = new List<GameObject>();
@@ -52,6 +60,15 @@ public class PatrolerKnight : MonoBehaviour
     public void setPlayerPoint()
     {
         _target = _player;
+        _chainicsCount = 0;
+        _canSpawn = false;
+        StartCoroutine(spawnReset());
+    }
+
+    IEnumerator spawnReset()
+    {
+        yield return new WaitForSeconds(_chainikCooldown);
+        _canSpawn = true;
     }
 
     public void SPAWNCHAINIC()
