@@ -7,13 +7,14 @@ public class Knight : Interactable
     private PatrolerKnight patroler;
     public override void applyFireBall()
     {
-        throw new System.NotImplementedException();
+        patroler.takeDamage(25);
     }
 
     public override void applyStone()
     {
-        throw new System.NotImplementedException();
-    }
+        patroler.takeDamage(50);
+    
+    }   
 
     public override void applyWind(Vector2 dir)
     {

@@ -16,7 +16,7 @@ public class PatrolerKnight : MonoBehaviour
     [SerializeField] private int _maxHealth = 1000;
     [SerializeField] private int _speed = 0;
 
-    private float _chainikCooldown = 5f;
+    private float _chainikCooldown = 10f;
     private bool _canSpawn = true;
 
     //костыли
@@ -51,6 +51,10 @@ public class PatrolerKnight : MonoBehaviour
         get => _chainicsCount;
     }
 
+    public void takeDamage(int dmgValue)
+    {
+        _curentHealth -= dmgValue;
+    }
     public void setFarestPoint()
     {
         var orderedPoints = _points.OrderBy((p) => Vector2.Distance(p.transform.position, _player.position)).Reverse().ToList();
