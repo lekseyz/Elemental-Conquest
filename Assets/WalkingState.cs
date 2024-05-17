@@ -34,7 +34,7 @@ public class WalkingState : StateMachineBehaviour
     {
         float distance = patroler.targetDistance();
 
-        if (patroler.chainicsCount == 3)
+        if (patroler.chainicsCount == 2)
         {
             animator.SetBool("IsSpawning", false);
             patroler.setPlayerPoint();
@@ -53,11 +53,11 @@ public class WalkingState : StateMachineBehaviour
     {
         float distance = patroler.targetDistance();
 
-        if (distance < 4)
+        if (distance < 3)
         {
             animator.SetTrigger("CloseAttack");
         }
-        else if (distance > 8 && patroler.canSpawn)
+        else if (distance > 7 && patroler.canSpawn)
         {
             animator.SetBool("IsSpawning", true);
             //animator.SetTrigger("SpikeAttack");
