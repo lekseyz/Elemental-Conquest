@@ -10,6 +10,10 @@ public class Attack : MonoBehaviour
     public BasicSpell fb;
     public BasicSpell rck;
     public Animator animator;
+
+    // «вук дл€ воспроизведени€ при использовании FireBall
+    public AudioSource fireballSound;
+
     private void Start()
     {
         ms = GetComponent<MagicSystem>();
@@ -39,18 +43,13 @@ public class Attack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
             applyAttack();
-
-
     }
-
 
     void applyAttack()
     {
-        
-        
         //Attack handling
         var comb = ms.getFinalCombination();
-        if (comb!= "ww")
+        if (comb != "ww")
         {
             if (comb == "ss")
                 animator.SetTrigger("RockCast");
@@ -62,9 +61,15 @@ public class Attack : MonoBehaviour
         Debug.Log("Attacked: " + comb);
         BasicSpell spell;
 
-        if(magics.TryGetValue(comb, out spell)) 
+        if (magics.TryGetValue(comb, out spell))
         {
             instantiator.instatiateMagic(spell);
+
+            // ¬оспроизведение звука при использовании FireBall
+            if (comb == "ff" && fireballSound != null)
+            {
+                fireballSound.Play();
+            }
         }
     }
 }

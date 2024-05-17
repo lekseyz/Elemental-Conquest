@@ -1,11 +1,9 @@
-using System;
-using UnityEngine.Timeline;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Walk : MonoBehaviour
 {
     [SerializeField] GameObject magicAplier;
-
     [SerializeField] public float speed;
     [SerializeField] Slider staminaSlider;
     Vector3 dir = Vector3.down;
@@ -13,21 +11,19 @@ public class Walk : MonoBehaviour
     Vector3 prevDirMov = Vector3.zero;
     public Vector3 Dir { get { return dir; } }
     float scSpeed = 1f;
-
     public Rigidbody2D rb;
     public Animator animator;
-
     private float activeSpeed;
     public float dashSpeed;
-
     public float dashDuration;
     public float dashCooldown;
-
     private float dashCounter = 0;
     private float dashCoolCounter = 0;
-
     private float staminaValue = 100;
     private bool isFirst = false;
+
+    // Звук для воспроизведения при dash
+    public AudioSource dashSound;
 
     void Update()
     {
@@ -42,6 +38,7 @@ public class Walk : MonoBehaviour
         Time.fixedDeltaTime = 0.01f;
         staminaSlider.value = 100;
     }
+
     private void Movement()
     {
         //rewrited character movement
@@ -64,20 +61,16 @@ public class Walk : MonoBehaviour
             dirMov.y = -1;
         }
 
-
         dirMov = Vector3.Lerp(prevDirMov, dirMov, scSpeed);
-
         dirMov = dirMov.normalized;
         dir = dirMov.magnitude > 0 ? dirMov : dir;
         animator.SetBool("isMoving", rb.velocity.magnitude > 0);
-
         animator.SetFloat("Horizontal", dir.x);
         animator.SetFloat("Vertical", dir.y);
     }
 
     public void Dash(bool isDashed)
     {
-
         if (isDashed)
         {
             if (dashCoolCounter <= 0f && dashCounter <= 0f)
@@ -86,6 +79,12 @@ public class Walk : MonoBehaviour
                 staminaValue = 100;
                 activeSpeed = dashSpeed;
                 dashCounter = dashDuration;
+
+                // Воспроизведение звука при начале dash
+                if (dashSound != null)
+                {
+                    dashSound.Play();
+                }
             }
         }
 
@@ -106,7 +105,6 @@ public class Walk : MonoBehaviour
             staminaSlider.value = staminaValue;
         }
 
-
         if (dashCoolCounter <= 0 && isFirst == true)
         {
             staminaValue = Mathf.Lerp(100f, 0f, 1 - dashDuration / dashCounter);
@@ -114,7 +112,7 @@ public class Walk : MonoBehaviour
     }
 
     private void FixedUpdate()
-    { 
+    {
         rb.velocity = dirMov * activeSpeed;
     }
 }

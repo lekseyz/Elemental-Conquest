@@ -12,7 +12,7 @@ public class Torch : Interactable
     public float maxDistance = 10f;
 
     private void Awake()
-    {
+    {/*
         // Check for necessary components and log errors if not assigned
         if (torchSound == null)
         {
@@ -33,7 +33,8 @@ public class Torch : Interactable
         {
             Debug.LogError("movement is not assigned in the Inspector!");
         }
-    }
+    */
+     }
 
     override public void applyFireBall()
     {

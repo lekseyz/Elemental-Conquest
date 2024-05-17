@@ -13,7 +13,7 @@ public class MoveScene : MonoBehaviour
             if (boss != null)
             {
                 // ѕровер€ем, что здоровье босса меньше или равно 0 (босс убит)
-                if (boss.currentHealth <= 0)
+                if (boss.CurrentHealth <= 0)
                 {
                     // ≈сли босс убит и мы находимс€ в другой сцене, разрешаем телепортацию
                     if (SceneManager.GetActiveScene().name != boss.gameObject.scene.name)
