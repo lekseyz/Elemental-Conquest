@@ -8,6 +8,8 @@ public class KnightAttack : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetFloat("RandomAttack", Random.Range(0, 1.0f));
+
         patroler = animator.GetComponent<PatrolerKnight>();
         patroler.speed = 0;
     }
@@ -15,6 +17,7 @@ public class KnightAttack : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = patroler.targetDistance();
+
 
         if (distance > 3)
         {

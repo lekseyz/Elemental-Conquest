@@ -53,11 +53,11 @@ public class WalkingState : StateMachineBehaviour
     {
         float distance = patroler.targetDistance();
 
-        if (distance < 2)
+        if (distance < 10)
         {
             animator.SetTrigger("CloseAttack");
         }
-        else if (distance > 8 && patroler.canSpawn)
+        else if (distance > 1000 && patroler.canSpawn)
         {
             animator.SetBool("IsSpawning", true);
             //animator.SetTrigger("SpikeAttack");
