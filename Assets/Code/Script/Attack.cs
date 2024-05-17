@@ -54,7 +54,10 @@ public class Attack : MonoBehaviour
             if (comb == "ss")
                 animator.SetTrigger("RockCast");
             else if (comb == "s")
-                animator.SetTrigger("Shield");
+            {
+
+            }
+                //animator.SetTrigger("Shield");
             else
                 animator.SetTrigger("Attack");
         }
