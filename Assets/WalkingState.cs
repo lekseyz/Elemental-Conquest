@@ -18,6 +18,7 @@ public class WalkingState : StateMachineBehaviour
     {
         float distance = patroler.targetDistance();
 
+        patroler.walkToTarget();
 
         if (animator.GetBool("IsSpawning"))
         {

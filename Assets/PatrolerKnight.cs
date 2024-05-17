@@ -10,12 +10,19 @@ public class PatrolerKnight : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private GameObject _chainik;
 
+    private Rigidbody2D _rigidbody;
+
     [SerializeField] private int _curentHealth = 1000;
     [SerializeField] private int _maxHealth = 1000;
     [SerializeField] private int _speed = 0;
 
     private float _chainikCooldown = 5f;
     private bool _canSpawn = true;
+
+    //костыли
+    private Vector2 offset = Vector2.up * 2.1f;
+
+    //
 
     public bool canSpawn
     {
@@ -80,19 +87,28 @@ public class PatrolerKnight : MonoBehaviour
 
     }
 
-    public float targetDistance() { return Vector2.Distance(gameObject.transform.position, _target.position); }
+    public float targetDistance() {
+        Vector2 to = _target.position;
+        if (_target == _player) to -= offset;
+
+        return Vector2.Distance(gameObject.transform.position, to); 
+    }
     // Start is called before the first frame update
 
     void Start()
     {
         _animator = GetComponent<Animator>();
         _chainik.SetActive(true);
+
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void walkToTarget()
     {
-        transform.position = Vector2.MoveTowards(gameObject.transform.position, _target.position, _speed * Time.deltaTime);
+        Vector2 to = _target.position;
+        if (_target == _player) to -= offset;
+
+        transform.position = Vector2.MoveTowards(gameObject.transform.position, to, _speed * Time.deltaTime);
         Vector3 dir = Vector3.Normalize(_target.position - transform.position);
         _animator.SetFloat("X", dir.x);
         _animator.SetFloat("Y", dir.y);
