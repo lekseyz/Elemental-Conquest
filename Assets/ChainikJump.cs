@@ -5,8 +5,8 @@ using UnityEngine;
 public class ChainikJump : StateMachineBehaviour
 {
 
-    float speed = 6;
-    Vector2 player;
+    float speed = 8;
+    Transform player;
     Rigidbody2D ChainikRb;
 
 
@@ -15,7 +15,7 @@ public class ChainikJump : StateMachineBehaviour
     {
 
         ChainikRb = animator.GetComponent<Rigidbody2D>();
-        player = GameObject.FindWithTag("Player").transform.position;
+        player = GameObject.FindWithTag("Player").transform;
 
 
     }
@@ -23,8 +23,8 @@ public class ChainikJump : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        var targer = Vector2.MoveTowards(ChainikRb.position, player, speed * Time.fixedDeltaTime);
-        ChainikRb.MovePosition(targer);
+        var target = Vector2.MoveTowards(ChainikRb.position, player.position, speed * Time.deltaTime);
+        ChainikRb.MovePosition(target);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

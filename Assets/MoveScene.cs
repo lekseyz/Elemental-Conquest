@@ -37,7 +37,7 @@ public class MoveScene : MonoBehaviour
             else
             {
                 // Если ссылка на компонент Boss отсутствует, телепортация разрешена без проверки здоровья босса
-                // Переключаемся между сценами
+                // Переключаемся между сц   енами
                 if (SceneManager.GetActiveScene().name == "ZeroVerScene")
                     SceneManager.LoadScene("Scene1");
                 else if (SceneManager.GetActiveScene().name == "Scene1")

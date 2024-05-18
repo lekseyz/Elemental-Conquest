@@ -27,9 +27,9 @@ public class pointIdle : StateMachineBehaviour
         jumpCoolDown -= Time.deltaTime;
         if (jumpCoolDown <= 0)
         {
-            jumpCoolDown = 3;
             if (Vector2.Distance(point.position, player.position) > 1)
             {
+                jumpCoolDown = 3;
                 animator.SetTrigger("setJump");
             }
         }

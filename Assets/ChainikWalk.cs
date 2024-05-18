@@ -14,6 +14,7 @@ public class ChainikWalk : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        jumpCoolDown = 1f;
         player = GameObject.FindWithTag("Player").transform;
         chainik = animator.gameObject.GetComponent<Rigidbody2D>();
     }

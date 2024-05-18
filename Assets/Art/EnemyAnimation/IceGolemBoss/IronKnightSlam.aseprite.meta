@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 595e57f3056a1154dbb8d26c9f6c8ade
+guid: 304214283711d1545b8ed7043e314793
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 299
       width: 56
       height: 88
-    spriteID: 1da584b61218ddb4394ef8c209f8397e
+    spriteID: d3af74aba8395194a97d2a0648ab4a0b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +152,7 @@ ScriptedImporter:
       y: 102
       width: 57
       height: 104
-    spriteID: 04bcf34cca317914c8c1646f35a08458
+    spriteID: 4b6e87fd5b03ac24189dd175da1da894
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +172,7 @@ ScriptedImporter:
       y: 226
       width: 61
       height: 106
-    spriteID: 712339c1075cb9e449e6c5ec772bd074
+    spriteID: 2a4b42e10b0abc94b823cc6b73f4bf4a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +192,7 @@ ScriptedImporter:
       y: 4
       width: 58
       height: 82
-    spriteID: a4de73b15bde4164ca47b418d4385a12
+    spriteID: 08d91aa27c5478d4987cb000e3dd2a14
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +212,7 @@ ScriptedImporter:
       y: 4
       width: 59
       height: 90
-    spriteID: c46dd555d3af93d48b32ae126ad15519
+    spriteID: 6e941efeb2a5f7c4db5027a285103575
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +232,7 @@ ScriptedImporter:
       y: 4
       width: 68
       height: 90
-    spriteID: d00cc5ca8e013784ba4ff265f99835c8
+    spriteID: 638b4240f6248b148887a3dd641fca16
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +252,7 @@ ScriptedImporter:
       y: 114
       width: 65
       height: 104
-    spriteID: efa1063dc5d44c74fb21b77021d71fb9
+    spriteID: f0059164a98fcdf478f78b59e2576c7e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +272,7 @@ ScriptedImporter:
       y: 326
       width: 57
       height: 97
-    spriteID: 21a7d6d37e7c4954bbcb34b541df3d75
+    spriteID: 2191d2d8f5fda1748ad67cea43027d70
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +292,7 @@ ScriptedImporter:
       y: 200
       width: 58
       height: 91
-    spriteID: 0ebff5536c3b0594d8ac770e6ca03616
+    spriteID: 44c6913304a70e541bcf49a326778e28
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 4
       width: 70
       height: 102
-    spriteID: ad5e833a72ed55f478dd16f538c60f00
+    spriteID: 48b3860443af9ec4c926909d0923484c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -332,7 +332,7 @@ ScriptedImporter:
       y: 4
       width: 57
       height: 86
-    spriteID: 6c9cb135c8bce104daad5c67bfd9fc31
+    spriteID: fb8731bb3acd80846858bd8a86dc37bf
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -352,7 +352,7 @@ ScriptedImporter:
       y: 102
       width: 59
       height: 90
-    spriteID: e2b5e3e4a21cfdb4d9dbc77314318953
+    spriteID: 8757113b7aef3f24b93b67ee30acc14d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -372,7 +372,7 @@ ScriptedImporter:
       y: 340
       width: 61
       height: 106
-    spriteID: a5c670734b5e00d40b3aa564486956c2
+    spriteID: 1434750a4044dbd4aa2f352add888003
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -392,7 +392,7 @@ ScriptedImporter:
       y: 214
       width: 57
       height: 104
-    spriteID: 3d9467bcb3c8137418b970502901f455
+    spriteID: b326012af16884e4db854b04d30d74c6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -412,7 +412,7 @@ ScriptedImporter:
       y: 395
       width: 56
       height: 88
-    spriteID: db0cef68f1c6f834c8545253dfcd967c
+    spriteID: 8f7be17e3850d984a9b45842e6c3ea74
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -437,7 +437,7 @@ ScriptedImporter:
         y: 24
         width: 56
         height: 88
-      spriteId: 1da584b61218ddb4394ef8c209f8397e
+      spriteId: d3af74aba8395194a97d2a0648ab4a0b
     - name: IronKnightSlam_Frame_1
       frameIndex: 1
       cellRect:
@@ -445,7 +445,7 @@ ScriptedImporter:
         y: 24
         width: 57
         height: 104
-      spriteId: 04bcf34cca317914c8c1646f35a08458
+      spriteId: 4b6e87fd5b03ac24189dd175da1da894
     - name: IronKnightSlam_Frame_2
       frameIndex: 2
       cellRect:
@@ -453,7 +453,7 @@ ScriptedImporter:
         y: 24
         width: 61
         height: 106
-      spriteId: 712339c1075cb9e449e6c5ec772bd074
+      spriteId: 2a4b42e10b0abc94b823cc6b73f4bf4a
     - name: IronKnightSlam_Frame_3
       frameIndex: 3
       cellRect:
@@ -461,7 +461,7 @@ ScriptedImporter:
         y: 24
         width: 58
         height: 82
-      spriteId: a4de73b15bde4164ca47b418d4385a12
+      spriteId: 08d91aa27c5478d4987cb000e3dd2a14
     - name: IronKnightSlam_Frame_4
       frameIndex: 4
       cellRect:
@@ -469,7 +469,7 @@ ScriptedImporter:
         y: 18
         width: 59
         height: 90
-      spriteId: c46dd555d3af93d48b32ae126ad15519
+      spriteId: 6e941efeb2a5f7c4db5027a285103575
     - name: IronKnightSlam_Frame_5
       frameIndex: 5
       cellRect:
@@ -477,7 +477,7 @@ ScriptedImporter:
         y: 18
         width: 68
         height: 90
-      spriteId: d00cc5ca8e013784ba4ff265f99835c8
+      spriteId: 638b4240f6248b148887a3dd641fca16
     - name: IronKnightSlam_Frame_6
       frameIndex: 6
       cellRect:
@@ -485,7 +485,7 @@ ScriptedImporter:
         y: 17
         width: 65
         height: 104
-      spriteId: efa1063dc5d44c74fb21b77021d71fb9
+      spriteId: f0059164a98fcdf478f78b59e2576c7e
     - name: IronKnightSlam_Frame_7
       frameIndex: 7
       cellRect:
@@ -493,7 +493,7 @@ ScriptedImporter:
         y: 18
         width: 57
         height: 97
-      spriteId: 21a7d6d37e7c4954bbcb34b541df3d75
+      spriteId: 2191d2d8f5fda1748ad67cea43027d70
     - name: IronKnightSlam_Frame_8
       frameIndex: 8
       cellRect:
@@ -501,7 +501,7 @@ ScriptedImporter:
         y: 18
         width: 58
         height: 91
-      spriteId: 0ebff5536c3b0594d8ac770e6ca03616
+      spriteId: 44c6913304a70e541bcf49a326778e28
     - name: IronKnightSlam_Frame_9
       frameIndex: 9
       cellRect:
@@ -509,7 +509,7 @@ ScriptedImporter:
         y: 7
         width: 70
         height: 102
-      spriteId: ad5e833a72ed55f478dd16f538c60f00
+      spriteId: 48b3860443af9ec4c926909d0923484c
     - name: IronKnightSlam_Frame_10
       frameIndex: 10
       cellRect:
@@ -517,7 +517,7 @@ ScriptedImporter:
         y: 18
         width: 57
         height: 86
-      spriteId: 6c9cb135c8bce104daad5c67bfd9fc31
+      spriteId: fb8731bb3acd80846858bd8a86dc37bf
     - name: IronKnightSlam_Frame_11
       frameIndex: 11
       cellRect:
@@ -525,7 +525,7 @@ ScriptedImporter:
         y: 18
         width: 59
         height: 90
-      spriteId: e2b5e3e4a21cfdb4d9dbc77314318953
+      spriteId: 8757113b7aef3f24b93b67ee30acc14d
     - name: IronKnightSlam_Frame_12
       frameIndex: 12
       cellRect:
@@ -533,7 +533,7 @@ ScriptedImporter:
         y: 24
         width: 61
         height: 106
-      spriteId: a5c670734b5e00d40b3aa564486956c2
+      spriteId: 1434750a4044dbd4aa2f352add888003
     - name: IronKnightSlam_Frame_13
       frameIndex: 13
       cellRect:
@@ -541,7 +541,7 @@ ScriptedImporter:
         y: 24
         width: 57
         height: 104
-      spriteId: 3d9467bcb3c8137418b970502901f455
+      spriteId: b326012af16884e4db854b04d30d74c6
     - name: IronKnightSlam_Frame_14
       frameIndex: 14
       cellRect:
@@ -549,7 +549,7 @@ ScriptedImporter:
         y: 24
         width: 56
         height: 88
-      spriteId: db0cef68f1c6f834c8545253dfcd967c
+      spriteId: 8f7be17e3850d984a9b45842e6c3ea74
     linkedCells: []
     parentIndex: -1
   platformSettings: []
