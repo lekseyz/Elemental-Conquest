@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChainikJump : StateMachineBehaviour
 {
 
-    float speed = 12;
+    float speed = 8;
     Transform player;
     Rigidbody2D ChainikRb;
 

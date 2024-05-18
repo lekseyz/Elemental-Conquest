@@ -1,22 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class KnightAttack : StateMachineBehaviour
+public class ColumnState : StateMachineBehaviour
 {
     PatrolerKnight patroler;
-
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         patroler = animator.GetComponent<PatrolerKnight>();
-        patroler.speed = 0;
+
+        patroler.SpawnColumns();
+        
     }
 
-
-
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("CloseAttack");
+        animator.SetBool("IsSpawning", false);
+        patroler.setPlayerPoint();
     }
 }

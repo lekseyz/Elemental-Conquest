@@ -16,14 +16,18 @@ public class CooseRangedAttack : StateMachineBehaviour
     {
         if (patroler.CurrentHealth > patroler.MaxHealth/2)
         {
-           
+            animator.Play("SpikeAttack");  
+        }
+        else
+        {
+            animator.Play("ColumnState");
         }
     }
 
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        animator.ResetTrigger("Ranged");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

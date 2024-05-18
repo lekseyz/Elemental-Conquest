@@ -44,7 +44,7 @@ public class WalkingState : StateMachineBehaviour
         }
         if(distance < 1)
         {
-            animator.SetTrigger("SpikeAttack");
+            animator.SetTrigger("Ranged");
             patroler.setFarestPoint();
             return;
         }
@@ -58,10 +58,10 @@ public class WalkingState : StateMachineBehaviour
         {
             animator.SetTrigger("CloseAttack");
         }
-        else if (distance > 6 && patroler.canSpawn)
+        else if (distance > 6 && patroler.canSpawn && patroler.columnCanSpawn)
         {
             animator.SetBool("IsSpawning", true);
-            //animator.SetTrigger("SpikeAttack");
+            animator.SetTrigger("Ranged");
             patroler.setFarestPoint();
         }
     }
@@ -69,6 +69,5 @@ public class WalkingState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("Walk");
     }
 }

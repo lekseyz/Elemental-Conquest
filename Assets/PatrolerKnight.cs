@@ -11,7 +11,7 @@ public class PatrolerKnight : MonoBehaviour
     [SerializeField] private GameObject _chainik;
     [SerializeField] private GameObject _column;
     [SerializeField] private float _columnCooldown = 15f;
-    private bool _columnCanSpawn;
+    private bool _columnCanSpawn = true;
     private Rigidbody2D _rigidbody;
 
     [SerializeField] private int _curentHealth = 1000;
@@ -32,7 +32,8 @@ public class PatrolerKnight : MonoBehaviour
     }
     public bool columnCanSpawn
     {
-        get { return _columnCanSpawn; }
+        get => _columnCanSpawn && (_columnCount == 0);
+        set => _columnCanSpawn = value;
     }
 
     public int CurrentHealth
@@ -65,11 +66,16 @@ public class PatrolerKnight : MonoBehaviour
         get => _chainicsCount;
     }
     public int columnCount
-    { get => _columnCount; }
+    {
+        get => _columnCount;
+        set => _columnCount = value;
+    }
         
         
     public void takeDamage(int dmgValue)
     {
+        if (_columnCount != 0) return;
+        
         _curentHealth -= dmgValue;
     }
     public void setFarestPoint()
@@ -86,11 +92,20 @@ public class PatrolerKnight : MonoBehaviour
     }
     public void SpawnColumns()
     {
+        if (columnCanSpawn == false) return;
+        _columnCount = 0;
+
         foreach(var i  in _points)
         {
-            Instantiate(_column, i.transform.position, _column.transform.rotation);
-            _columnCount +=1;
+            var col = Instantiate(_column, i.transform.position, _column.transform.rotation);
+            if(col != null)
+            {
+                _columnCount += 1;
+                col.GetComponent<Column>().patroler = this;
+            }
         }
+        _columnCanSpawn = false;
+        StartCoroutine(ColumnSpawnReset());
     }
 
     IEnumerator ColumnSpawnReset()

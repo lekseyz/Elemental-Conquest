@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class Column : MonoBehaviour
@@ -7,6 +8,8 @@ public class Column : MonoBehaviour
     [SerializeField] private int _MaxHealth = 75;
     [SerializeField] private int _currentHealth = 75;
     Animator _animator;
+    public PatrolerKnight patroler;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class Column : MonoBehaviour
 
     public void Update()
     {
-            if (_currentHealth <= 0) {
+        if (_currentHealth <= 0) {
             _animator.SetTrigger("Destroy");
         }
     }
