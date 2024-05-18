@@ -58,7 +58,7 @@ public class WalkingState : StateMachineBehaviour
         {
             animator.SetTrigger("CloseAttack");
         }
-        else if (distance > 6 && patroler.canSpawn && patroler.columnCanSpawn)
+        else if (distance > 4 && patroler.canSpawn && patroler.columnCanSpawn)
         {
             animator.SetBool("IsSpawning", true);
             animator.SetTrigger("Ranged");
