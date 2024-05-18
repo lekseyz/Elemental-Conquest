@@ -29822,8 +29822,8 @@ MonoBehaviour:
   _chainik: {fileID: 7513187948780096067, guid: 6924dc5fd07e85e4b8cecb755fe5cd7e,
     type: 3}
   _column: {fileID: 8230324901979010442, guid: bd4b3b7f4711b2d4dbb2241f8413086a, type: 3}
-  _columnCooldown: 10
-  _curentHealth: 510
+  _columnCooldown: 15
+  _curentHealth: 1000
   _maxHealth: 1000
   _speed: 100
   _points:
