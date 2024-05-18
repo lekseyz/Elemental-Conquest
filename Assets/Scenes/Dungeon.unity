@@ -29823,8 +29823,8 @@ MonoBehaviour:
     type: 3}
   _column: {fileID: 8230324901979010442, guid: bd4b3b7f4711b2d4dbb2241f8413086a, type: 3}
   _columnCooldown: 15
-  _curentHealth: 1000
-  _maxHealth: 1000
+  _curentHealth: 2000
+  _maxHealth: 2000
   _speed: 100
   _points:
   - {fileID: 1619954923}
