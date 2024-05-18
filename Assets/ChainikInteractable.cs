@@ -8,7 +8,7 @@ public class ChainikInteractable : Interactable
     Rigidbody2D rigidbody;
     public override void applyFireBall()
     {
-        controller.takeDamage(0);
+        controller.takeDamage(25);
     }
 
     public override void applyStone()

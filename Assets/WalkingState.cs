@@ -10,7 +10,7 @@ public class WalkingState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         patroler = animator.GetComponent<PatrolerKnight>();
-        patroler.speed = 4;
+        patroler.speed = 5;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -53,11 +53,11 @@ public class WalkingState : StateMachineBehaviour
     {
         float distance = patroler.targetDistance();
 
-        if (distance < 3)
+        if (distance < 2)
         {
             animator.SetTrigger("CloseAttack");
         }
-        else if (distance > 7 && patroler.canSpawn)
+        else if (distance > 5 && patroler.canSpawn)
         {
             animator.SetBool("IsSpawning", true);
             //animator.SetTrigger("SpikeAttack");

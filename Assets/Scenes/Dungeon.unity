@@ -28436,7 +28436,7 @@ MonoBehaviour:
     type: 3}
   _curentHealth: 1000
   _maxHealth: 1000
-  _speed: 0
+  _speed: 100
   _points:
   - {fileID: 1619954923}
   - {fileID: 472628433}
@@ -28539,8 +28539,8 @@ BoxCollider2D:
   m_Offset: {x: 0.006861806, y: 0.68}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5692308, y: -0.018691588}
-    oldSize: {x: 0.65, y: 1.07}
+    pivot: {x: 0.53571427, y: -0.27272728}
+    oldSize: {x: 0.56, y: 0.88}
     newSize: {x: 0.56, y: 0.88}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
