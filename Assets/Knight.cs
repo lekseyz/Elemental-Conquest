@@ -12,7 +12,7 @@ public class Knight : Interactable
 
     public override void applyStone()
     {
-        patroler.takeDamage(50);
+        patroler.takeDamage(0);
     
     }   
 

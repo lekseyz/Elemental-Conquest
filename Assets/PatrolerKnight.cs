@@ -9,7 +9,9 @@ public class PatrolerKnight : MonoBehaviour
     [SerializeField] private Transform _player;
     [SerializeField] private Transform _target;
     [SerializeField] private GameObject _chainik;
-
+    [SerializeField] private GameObject _column;
+    [SerializeField] private float _columnCooldown = 15f;
+    private bool _columnCanSpawn;
     private Rigidbody2D _rigidbody;
 
     [SerializeField] private int _curentHealth = 1000;
@@ -28,10 +30,22 @@ public class PatrolerKnight : MonoBehaviour
     {
         get => _canSpawn;
     }
+    public bool columnCanSpawn
+    {
+        get { return _columnCanSpawn; }
+    }
 
+    public int CurrentHealth
+    {
+        get => _curentHealth;
+    }
+    public int MaxHealth
+    { get => _maxHealth; }
     private int _chainicsCount = 0;
 
-    [SerializeField] private List<GameObject> _points = new List<GameObject>();
+    private int _columnCount = 0;
+
+    [SerializeField]private List<GameObject> _points = new List<GameObject>();
 
     private Animator _animator;
     public int speed
@@ -50,7 +64,10 @@ public class PatrolerKnight : MonoBehaviour
     {
         get => _chainicsCount;
     }
-
+    public int columnCount
+    { get => _columnCount; }
+        
+        
     public void takeDamage(int dmgValue)
     {
         _curentHealth -= dmgValue;
@@ -67,7 +84,22 @@ public class PatrolerKnight : MonoBehaviour
             }
         }
     }
-    
+    public void SpawnColumns()
+    {
+        foreach(var i  in _points)
+        {
+            Instantiate(_column, i.transform.position, _column.transform.rotation);
+            _columnCount +=1;
+        }
+    }
+
+    IEnumerator ColumnSpawnReset()
+    {
+        yield return new WaitForSeconds(_columnCooldown);
+        _columnCanSpawn = true;
+    }
+
+
     public void setPlayerPoint()
     {
         _target = _player;

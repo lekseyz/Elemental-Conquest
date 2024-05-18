@@ -16,15 +16,17 @@ public class WalkingState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         float distance = patroler.targetDistance();
 
         patroler.walkToTarget();
 
+        
         if (animator.GetBool("IsSpawning"))
         {
             checkSpawningStates(animator);
         } 
-        else
+        else 
         {
             checkDefaultStates(animator);
         }
@@ -34,13 +36,12 @@ public class WalkingState : StateMachineBehaviour
     {
         float distance = patroler.targetDistance();
 
-        if (patroler.chainicsCount == 2)
+        if (patroler.chainicsCount == 3)
         {
             animator.SetBool("IsSpawning", false);
             patroler.setPlayerPoint();
             return;   
         }
-
         if(distance < 1)
         {
             animator.SetTrigger("SpikeAttack");
@@ -57,7 +58,7 @@ public class WalkingState : StateMachineBehaviour
         {
             animator.SetTrigger("CloseAttack");
         }
-        else if (distance > 5 && patroler.canSpawn)
+        else if (distance > 6 && patroler.canSpawn)
         {
             animator.SetBool("IsSpawning", true);
             //animator.SetTrigger("SpikeAttack");
