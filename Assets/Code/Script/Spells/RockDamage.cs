@@ -12,7 +12,7 @@ public class RockDamage : MonoBehaviour
             other.gameObject.GetComponent<Interactable>().applyStone();
         }
 
-        if (other.gameObject.tag != "Lava" && other.gameObject.tag != "Player")
+        if (other.gameObject.tag != "Lava" && other.gameObject.tag != "Player" && other.gameObject.tag != "Button")
         {
             animator.SetBool("Destroy", true);
             //Destroy(gameObject, 0.4f);
