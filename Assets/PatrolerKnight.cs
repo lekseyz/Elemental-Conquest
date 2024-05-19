@@ -153,6 +153,13 @@ public class PatrolerKnight : MonoBehaviour
 
         _rigidbody = GetComponent<Rigidbody2D>();
     }
+    public void Update()
+    {
+        if (_curentHealth<=0)
+        {
+            _animator.SetTrigger("Death");
+        }
+    }
 
     public void walkToTarget()
     {

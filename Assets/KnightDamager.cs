@@ -9,7 +9,7 @@ public class KnightDamager : MonoBehaviour
         Destructible destructible = collision.GetComponent<Destructible>();
         if(destructible != null)
         {
-            destructible.ApplyDamage(0);
+            destructible.ApplyDamage(25);
         }
     }
 }
