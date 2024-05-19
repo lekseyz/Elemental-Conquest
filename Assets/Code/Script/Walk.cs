@@ -28,20 +28,29 @@ public class Walk : MonoBehaviour
     void Update()
     {
         Movement();
-        magicAplier.GetComponent<Instantiator>().setPosition(dir);
+        // Проверка на наличие объекта magicAplier и его компонента Instantiator
+        if (magicAplier != null && magicAplier.GetComponent<Instantiator>() != null)
+        {
+            // Установка позиции в соответствии с текущим направлением
+            magicAplier.GetComponent<Instantiator>().setPosition(dir);
+        }
+        // Вызов метода Dash с аргументом false
         Dash(false);
     }
 
     private void Start()
     {
+        // Получение Rigidbody2D при запуске
         rb = GetComponent<Rigidbody2D>();
+        // Установка фиксированного шага времени
         Time.fixedDeltaTime = 0.01f;
+        // Установка начального значения для полосы выносливости
         staminaSlider.value = 100;
     }
 
     private void Movement()
     {
-        //rewrited character movement
+        // Переписанное управление персонажем
         dirMov = Vector3.zero;
         if (Input.GetKey(KeyCode.A))
         {
@@ -61,9 +70,12 @@ public class Walk : MonoBehaviour
             dirMov.y = -1;
         }
 
+        // Линейная интерполяция между предыдущим и текущим направлением движения
         dirMov = Vector3.Lerp(prevDirMov, dirMov, scSpeed);
         dirMov = dirMov.normalized;
+        // Установка текущего направления
         dir = dirMov.magnitude > 0 ? dirMov : dir;
+        // Установка параметров анимации
         animator.SetBool("isMoving", rb.velocity.magnitude > 0);
         animator.SetFloat("Horizontal", dir.x);
         animator.SetFloat("Vertical", dir.y);
@@ -71,8 +83,10 @@ public class Walk : MonoBehaviour
 
     public void Dash(bool isDashed)
     {
+        // Проверка, активирован ли рывок
         if (isDashed)
         {
+            // Проверка, доступен ли рывок в данный момент
             if (dashCoolCounter <= 0f && dashCounter <= 0f)
             {
                 isFirst = true;
@@ -80,7 +94,7 @@ public class Walk : MonoBehaviour
                 activeSpeed = dashSpeed;
                 dashCounter = dashDuration;
 
-                // Воспроизведение звука при начале dash
+                // Воспроизведение звука при начале рывка
                 if (dashSound != null)
                 {
                     dashSound.Play();
@@ -88,6 +102,7 @@ public class Walk : MonoBehaviour
             }
         }
 
+        // Уменьшение времени рывка и перезарядки
         if (dashCounter > 0)
         {
             dashCounter -= Time.deltaTime;
@@ -101,6 +116,7 @@ public class Walk : MonoBehaviour
         if (dashCoolCounter > 0)
         {
             dashCoolCounter -= Time.deltaTime;
+            // Изменение значения выносливости
             staminaValue = Mathf.Lerp(100f, 0f, dashCoolCounter / dashCooldown);
             staminaSlider.value = staminaValue;
         }
@@ -113,6 +129,7 @@ public class Walk : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Применение скорости движения
         rb.velocity = dirMov * activeSpeed;
     }
 }

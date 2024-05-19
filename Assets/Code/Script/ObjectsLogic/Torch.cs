@@ -42,27 +42,15 @@ public class Torch : Interactable
         {
             torchAnimator.SetBool("isActive", true);
         }
-        else
-        {
-            Debug.LogError("torchAnimator is not assigned!");
-        }
 
         if (movement != null)
         {
             movement.openWall();
         }
-        else
-        {
-            Debug.LogError("movement is not assigned!");
-        }
 
         if (torchSound != null)
         {
             torchSound.Play();
-        }
-        else
-        {
-            Debug.LogError("torchSound is not assigned!");
         }
     }
 

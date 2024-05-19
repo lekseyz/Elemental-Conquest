@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerDungeon : MonoBehaviour
@@ -7,16 +5,21 @@ public class TriggerDungeon : MonoBehaviour
     public IsPressed button;
     public Spike spike;
     public GameObject boss;
-    // Start is called before the first frame update
+    public MusicManager musicManager; 
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void SetMusicManager(MusicManager manager)
+    {
+        musicManager = manager;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,6 +29,7 @@ public class TriggerDungeon : MonoBehaviour
             button.gameObject.SetActive(false);
             spike.isActive = true;
             boss.SetActive(true);
+            musicManager.SwitchToBossMusic(); 
             Destroy(this.gameObject);
         }
     }
