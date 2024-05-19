@@ -56,6 +56,7 @@ public class Destructible : MonoBehaviour
         hitPoints = 0;
         maxHitPoints = 0;
         ChangeHP.Invoke();
+        SceneMem.sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("GameOver");
     }
 
