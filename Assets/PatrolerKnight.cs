@@ -157,7 +157,7 @@ public class PatrolerKnight : MonoBehaviour
     {
         if (_curentHealth<=0)
         {
-            _animator.SetTrigger("Death");
+            _animator.Play("Death State");
         }
     }
 
