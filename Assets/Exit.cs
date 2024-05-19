@@ -14,7 +14,7 @@ public class Exit : MonoBehaviour
 
     public void RespawnGame() // Респавн
     {
-        if (respawnInScene1) // Проверяем, в какой сцене респаунить героя
+        if (SceneMem.sceneName == "Scene1") // Проверяем, в какой сцене респаунить героя
         {
             SceneManager.LoadScene("Scene1");
         }
