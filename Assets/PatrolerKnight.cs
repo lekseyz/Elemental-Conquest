@@ -16,8 +16,8 @@ public class PatrolerKnight : MonoBehaviour
     private bool _columnCanSpawn = true;
     private Rigidbody2D _rigidbody;
 
-    [SerializeField] private int _curentHealth = 1000;
-    [SerializeField] private int _maxHealth = 1000;
+    [SerializeField] private int _curentHealth;
+    [SerializeField] private int _maxHealth;
     [SerializeField] private int _speed = 0;
 
     private float _chainikCooldown = 10f;
