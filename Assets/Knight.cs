@@ -18,7 +18,7 @@ public class Knight : Interactable
 
     public override void applyWind(Vector2 dir)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     // Start is called before the first frame update
