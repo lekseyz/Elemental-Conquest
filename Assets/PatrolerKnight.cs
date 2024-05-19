@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PatrolerKnight : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PatrolerKnight : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private GameObject _chainik;
     [SerializeField] private GameObject _column;
+    [SerializeField] private Image _fillAmountImage; // Added Image component
     [SerializeField] private float _columnCooldown = 15f;
     private bool _columnCanSpawn = true;
     private Rigidbody2D _rigidbody;
@@ -46,12 +48,12 @@ public class PatrolerKnight : MonoBehaviour
 
     private int _columnCount = 0;
 
-    [SerializeField]private List<GameObject> _points = new List<GameObject>();
+    [SerializeField] private List<GameObject> _points = new List<GameObject>();
 
     private Animator _animator;
     public int speed
     {
-        get 
+        get
         {
             return _speed;
         }
@@ -70,12 +72,12 @@ public class PatrolerKnight : MonoBehaviour
         get => _columnCount;
         set => _columnCount = value;
     }
-        
-        
+
+
     public void takeDamage(int dmgValue)
     {
         if (_columnCount != 0) return;
-        
+
         _curentHealth -= dmgValue;
     }
     public void setFarestPoint()
@@ -95,10 +97,10 @@ public class PatrolerKnight : MonoBehaviour
         if (columnCanSpawn == false) return;
         _columnCount = 0;
 
-        foreach(var i  in _points)
+        foreach (var i in _points)
         {
             var col = Instantiate(_column, i.transform.position, _column.transform.rotation);
-            if(col != null)
+            if (col != null)
             {
                 _columnCount += 1;
                 col.GetComponent<Column>().patroler = this;
@@ -138,11 +140,12 @@ public class PatrolerKnight : MonoBehaviour
 
     }
 
-    public float targetDistance() {
+    public float targetDistance()
+    {
         Vector2 to = _target.position;
         if (_target == _player) to -= offset;
 
-        return Vector2.Distance(gameObject.transform.position, to); 
+        return Vector2.Distance(gameObject.transform.position, to);
     }
     // Start is called before the first frame update
 
@@ -155,10 +158,13 @@ public class PatrolerKnight : MonoBehaviour
     }
     public void Update()
     {
-        if (_curentHealth<=0)
+        if (_curentHealth <= 0)
         {
             _animator.Play("Death State");
         }
+
+        // Update fill amount of Image based on health
+        _fillAmountImage.fillAmount = (float)_curentHealth / _maxHealth;
     }
 
     public void walkToTarget()

@@ -5,14 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
-    public void ExitGame() //выход из игры
+    public static bool respawnInScene1 = false; // Переменная для определения, в какой сцене респаунить героя
+
+    public void ExitGame() // Выход из игры
     {
         Application.Quit();
     }
 
-    public void RespawnGame() //респавн
+    public void RespawnGame() // Респавн
     {
-        SceneManager.LoadScene("Scene1"); //SceneManager.GetActiveScene().buildIndex - последняя сцена(загружает саму меню, а не игру). Не придумал как через это, если будет несколько миров
+        if (respawnInScene1) // Проверяем, в какой сцене респаунить героя
+        {
+            SceneManager.LoadScene("Scene1");
+        }
+        else
+        {
+            SceneManager.LoadScene("Dungeon");
+        }
     }
 
     public void GoToMenu()

@@ -1,40 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChainikController : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currentHealt = 100;
-
+    [SerializeField] private int currentHealth = 100;
+    [SerializeField] private int damageAmount = 10; 
     private Animator animator;
+    private SliderController sliderController;
 
-    public void takeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        currentHealt -= damage;
+        currentHealth -= damage;
+        sliderController.UpdateSliderVal(currentHealth, maxHealth); 
+        if (currentHealth <= 0)
+        {
+            animator.SetTrigger("Dead");
+        }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (currentHealt <= 0)
-        {
-            animator.SetTrigger("Dead");
-        }  
+        sliderController = FindObjectOfType<SliderController>();
+        sliderController.UpdateSliderVal(currentHealth, maxHealth);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             var destructible = collision.gameObject.GetComponent<Destructible>();
             destructible.ApplyDamage(10);
         }
     }
+
+
 }
