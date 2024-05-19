@@ -29,3 +29,7 @@
 ## 💻Используемые ресурсы:
 [Тайлмапa](https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605), https://pixeljad.itch.io/wintervillage?download  
 [Aнимация слайма](https://craftpix.net/freebies/free-slime-sprite-sheets-pixel-art/)
+[Тайлмапы для подземелья](https://szadiart.itch.io/rogue-fantasy-catacombs)
+
+## God-mod:
+Если испытываете проблемы с прохождением, то можете сачать билд с [god-mod](https://github.com/lekseyz/Elemental-Conquest/releases/tag/final_god)
