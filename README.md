@@ -33,3 +33,6 @@
 
 ## God-mod:
 Если испытываете проблемы с прохождением, то можете сачать билд с [god-mod](https://github.com/lekseyz/Elemental-Conquest/releases/tag/final_god)
+
+## Ссылка на полное прохождение:
+https://www.youtube.com/watch?v=s338nrCJ57k
